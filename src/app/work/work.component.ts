@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { faArrowRightLong, faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
 
 @Component ({
     selector: 'app-work',
@@ -6,5 +7,6 @@ import { Component } from "@angular/core";
 })
 
 export class WorkComponent {
-    
+    faArrowRight = faArrowRightLong
+    arrowUp = faArrowUpRightFromSquare
 }
