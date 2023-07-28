@@ -10,6 +10,7 @@ import { TsComponent } from './techstack/ts/ts.component';
 import { JsComponent } from './techstack/js/js.component';
 import { NodeComponent } from './techstack/node/node.component';
 import { TailwindComponent } from './techstack/tailwind/tailwind.component';
+import { WorkComponent } from './work/work.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { TailwindComponent } from './techstack/tailwind/tailwind.component';
     JsComponent,
     NodeComponent,
     TailwindComponent,
+    WorkComponent
     
   ],
   imports: [
