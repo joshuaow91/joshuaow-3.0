@@ -10,7 +10,7 @@
             '-translate-y-full': isHidden, 
             'translate-y-0': !isHidden
         }" 
-        class="fixed top-0 w-full z-50 transition-transform duration-500 ease-linear flex items-center justify-between max-w-screen-xl pt-3 ">
+        class="fixed top-0 w-full z-50 px-4 xl:px-0 transition-transform duration-500 ease-linear flex items-center justify-between max-w-screen-xl pt-3 ">
 
         <a [routerLink]="['/']" fragment="home" class="font-black text-zinc-700  text-4xl hover:scale-110 transition-all ease-linear duration-300  flex flex-col items-center">   
             <span class="bg-gradient-to-r from-blue-400 to-emerald-400 text-transparent bg-clip-text">JO</span>
@@ -25,12 +25,12 @@
     </div>
 
     <div @fadeIn class="flex items-center mt-56 mb-40 justify-center ">
-        <div class="flex flex-col font-semibold  text-7xl gap-2 text-zinc-700">
-            <div class="">
+        <div class="flex flex-col font-semibold items-center md:items-start text-5xl sm:text-5xl md:text-6xl lg:text-7xl gap-2 text-zinc-700">
+            <div class="flex flex-col items-center md:items-start">
                 <span class="">
                     Hello! I'm <span class="">Josh</span>, a<br/> <span class="bg-gradient-to-r from-blue-400 to-emerald-400 text-transparent bg-clip-text">Software Engineer</span><br/> based in Texas.
                 </span>
-                <p class="text-3xl font-light mt-3 ">I turn <span class="italic">ideas</span>💡into cutting-edge <span class="italic">software</span>. 👨‍💻</p>
+                <p class=" text-xl md:text-3xl font-light mt-3 self-center md:self-start">I turn <span class="italic">ideas</span>💡into cutting-edge <span class="italic">software</span>. 👨‍💻</p>
             </div>
             <ul class="flex gap-6 text-base font-medium mt-12">
                 <li class="hover:-translate-y-1 transition-all ease-linear duration-300 ">
