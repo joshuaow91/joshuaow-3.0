@@ -8,6 +8,8 @@ import { WorkComponent } from './work/work.component';
 import { AboutComponent } from './about/about.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     HeaderComponent,
     WorkComponent,
     AboutComponent,
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
