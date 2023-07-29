@@ -12,19 +12,19 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$joshuaow-3.0-primary: mat.define-palette(mat.$indigo-palette);
-$joshuaow-3.0-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$joshuaow_3_0_primary: mat.define-palette(mat.$indigo-palette);
+$joshuaow_3_0_accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$joshuaow-3.0-warn: mat.define-palette(mat.$red-palette);
+$joshuaow_3_0_warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$joshuaow-3.0-theme: mat.define-light-theme((
+$joshuaow_3_0_theme: mat.define-light-theme((
   color: (
-    primary: $joshuaow-3.0-primary,
-    accent: $joshuaow-3.0-accent,
-    warn: $joshuaow-3.0-warn,
+    primary: $joshuaow_3_0_primary,
+    accent: $joshuaow_3_0_accent,
+    warn: $joshuaow_3_0_warn,
   )
 ));
 
