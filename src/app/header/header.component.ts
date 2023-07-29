@@ -1,10 +1,21 @@
 import { Component, HostListener, OnInit } from "@angular/core";
 import { Router, ActivatedRoute, Scroll } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { trigger, transition, style, animate } from '@angular/animations';
+import { fadeAndSlideDownAnimation } from "./animations";
 
 @Component ({
     templateUrl: './header.component.html',
-    selector: 'app-header'
+    selector: 'app-header',
+    animations: [
+        fadeAndSlideDownAnimation,
+        trigger('fadeIn', [
+          transition(':enter', [
+            style({ opacity: 0 }),
+            animate('800ms', style({ opacity: 1 })),
+          ]),
+        ]),
+      ],
 })
 export class HeaderComponent implements OnInit {
     constructor(private router: Router, private route: ActivatedRoute) {}
