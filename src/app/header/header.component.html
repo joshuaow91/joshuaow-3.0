@@ -24,13 +24,22 @@
     </nav>
     </div>
 
-    <div @fadeIn class="flex items-center mt-56 mb-40 justify-center">
-        <div class="flex flex-col font-semibold items-center md:items-start text-5xl md:text-6xl lg:text-7xl gap-2 text-zinc-700">
+    <div @fadeIn class="flex items-center mt-36 sm:mt-56 mb-20 sm:mb-40 justify-center">
+        <div class="flex flex-col font-semibold items-center md:items-start text-7xl md:text-7xl lg:text-8xl gap-2 text-zinc-700">
             <div class="flex flex-col items-center md:items-start">
-                <span class="">
+                <span class="hidden sm:block">
                     Hello! I'm <span class="">Josh</span>, a<br/> <span class="bg-gradient-to-r from-blue-400 to-emerald-400 text-transparent bg-clip-text">Software Engineer</span><br/> based in Texas.
                 </span>
-                <p class=" text-xl md:text-3xl font-light mt-3 self-center md:self-start">I turn <span class="italic">ideas</span>💡into cutting-edge <span class="italic">software</span>. 👨‍💻</p>
+                <!-- mobile -->
+                <span class="flex flex-col text-4xl sm:hidden">
+                    <span class="">Hello!</span>
+                    <span class="">I'm Josh, a</span> 
+                    <!-- <span class=""> a</span>   -->
+                    <span class="text-4xl bg-gradient-to-r from-blue-400 to-emerald-400 text-transparent bg-clip-text">Software Engineer</span> 
+                    <span class="">based in Texas.</span>
+                </span>
+                <!-- end mobile -->
+                <p class="w-full pl-12 sm:pl-0 text-xl md:text-3xl font-light mt-3 self-center md:self-start">I turn <span class="italic">ideas</span>💡into cutting-edge <span class="italic">software</span>. 👨‍💻</p>
             </div>
             <ul class="flex gap-6 text-base font-medium mt-12">
                 <li class="hover:-translate-y-1 transition-all ease-linear duration-300 ">
@@ -49,6 +58,6 @@
 
 </header>
 
-<hr class="mb-16">
+<hr class=" mb-8 sm:mb-16">
 
 
