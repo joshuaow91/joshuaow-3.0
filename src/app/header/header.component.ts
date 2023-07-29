@@ -1,5 +1,4 @@
 import { Component } from "@angular/core";
-import { faTwitter, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 
 @Component ({
@@ -8,8 +7,6 @@ import { faTwitter, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-ic
 })
 
 export class HeaderComponent {
-    faTwitter = faTwitter
-    faLinkedin = faLinkedin
-    faGithub = faGithub
+
     
 }
