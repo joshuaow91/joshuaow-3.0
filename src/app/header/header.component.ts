@@ -53,7 +53,7 @@ export class HeaderComponent implements OnInit {
     @HostListener('window:scroll', [])
     onWindowScroll() {
         const currentScrollTop = window.scrollY || document.documentElement.scrollTop;
-        if (currentScrollTop > 300) {
+        if (currentScrollTop > 100) {
           this.isHidden = currentScrollTop > this.lastScrollTop;
         }
         else {
