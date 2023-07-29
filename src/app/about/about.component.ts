@@ -7,6 +7,7 @@ import { faReact, faAngular, faJs, faJira, faGitAlt, faNodeJs,  } from "@fortawe
     templateUrl: './about.component.html'
 })
 
+
 export class AboutComponent {
     faReact = faReact
     faAngular = faAngular
