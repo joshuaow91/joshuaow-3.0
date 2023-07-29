@@ -4,23 +4,25 @@
     id="home"
     >
 
-    <div class="flex justify-center">
+    <div class="flex justify-center ">
     <nav @fadeAndSlideDown
         [ngClass]="{
             '-translate-y-full': isHidden, 
             'translate-y-0': !isHidden
         }" 
-        class="fixed top-0 w-full z-50 px-4 xl:px-0 transition-transform duration-500 ease-linear flex items-center justify-between max-w-screen-xl pt-3 ">
-
-        <a [routerLink]="['/']" fragment="home" class="font-black text-zinc-700  text-4xl hover:scale-110 transition-all ease-linear duration-300  flex flex-col items-center">   
+        class="fixed top-0 w-full bg-zinc-100 bg-opacity-5 backdrop-blur-md z-50 px-4 xl:px-0 transition-transform duration-500 ease-in-out flex items-center justify-between  pt-3 ">
+    <div class="max-w-screen-xl flex justify-between w-full mx-auto">
+        <a [routerLink]="['/']" fragment="home" class="font-black text-zinc-700  text-3xl hover:scale-110 transition-all ease-linear duration-300  flex flex-col items-center">   
             <span class="bg-gradient-to-r from-blue-400 to-emerald-400 text-transparent bg-clip-text">JO</span>
             <span class="-translate-y-3 bg-gradient-to-r from-blue-400 to-emerald-400 text-transparent bg-clip-text">SH</span>
         </a>
-        <ul class="flex items-center  font-medium tracking-wide text-zinc-700 text-sm bg-white rounded-full border border-zinc-300 ">
-            <a [routerLink]="['/']" fragment="work" class="hover:bg-zinc-100 px-6 py-1.5 rounded-2xl rounded-r-none transition-all ease-linear duration-300 border-r border-zinc-300"><li>Work</li></a>
-            <a [routerLink]="['/']" fragment="about" class="hover:bg-zinc-100 px-4 py-1.5 border-r border-zinc-300 transition-all ease-linear duration-300"><li>About</li></a>
-            <a [routerLink]="['/']" fragment="contact" class="hover:bg-zinc-100 px-6 py-1.5 rounded-2xl rounded-l-none transition-all ease-linear duration-300"><li>Contact</li></a>
+        <ul class="flex items-center  font-medium tracking-wide text-zinc-500 text-lg  ">
+            <a [routerLink]="['/']" fragment="work" class="hover:bg-zinc-50 px-6 py-1.5 rounded-2xl  transition-all ease-linear duration-300  "><li>Work</li></a>
+            <a [routerLink]="['/']" fragment="about" class="hover:bg-zinc-50 px-4 py-1.5  rounded-2xl transition-all ease-linear duration-300"><li>About</li></a>
+            <a [routerLink]="['/']" fragment="contact" class="hover:bg-zinc-50 px-6 py-1.5 rounded-2xl transition-all ease-linear duration-300"><li>Contact</li></a>
         </ul>
+    </div>
+
     </nav>
     </div>
 
@@ -36,13 +38,12 @@
                 <span class="flex flex-col font-black tracking-tighter text-6xl sm:hidden px-2">
                     <span class="">Hello!</span>
                     <span class="">I'm Josh, a</span> 
-                    <span class="text-6xl bg-gradient-to-r from-blue-400 to-emerald-400 text-transparent bg-clip-text">Software</span> 
-                    <span class="text-6xl bg-gradient-to-r from-blue-400 to-emerald-400 text-transparent bg-clip-text">Engineer</span> 
+                    <span class="tracking-normal ">Software Engineer</span> 
                     <span class="">based in Texas.</span>
                 </span>
                 <!-- end mobile -->
 
-                <p class="w-full pl-2 text-2xl md:text-3xl lg:text-4xl font-light mt-6 sm:mt-3 self-center md:self-start">I turn <span class="italic">ideas</span>💡into cutting-edge <span class="italic">software</span>. 👨‍💻</p>
+                <p class=" w-full pl-2 px-16 sm:px-0 text-2xl md:text-3xl lg:text-4xl font-light mt-6 sm:mt-3 self-center md:self-start">I turn <span class="italic">ideas</span>💡into cutting-edge <span class="italic">software</span>. 👨‍💻</p>
             </div>
 
             <ul class="flex gap-6 text-base font-medium mt-12 self-start p-2  sm:p-0">
