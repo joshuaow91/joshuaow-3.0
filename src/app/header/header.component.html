@@ -20,7 +20,7 @@
         
                 <ul *ngIf="isMenuOpen || screenSize === 'large'" class="flex lg:flex-row flex-col gap-4 lg:gap-6 font-medium tracking-wide text-zinc-700 text-base w-full mt-6 lg:mt-0 lg:w-auto lg:items-center">
                     <li *ngFor="let item of menuItems">
-                        <a [routerLink]="[item.routerLink]" fragment="item.fragment" class="hover:text-zinc-600">{{item.name}}</a>
+                        <a [routerLink]="[item.routerLink]" [fragment]="item.fragment" class="hover:text-zinc-500" (click)="toggleMenu()">{{item.name}}</a>
                     </li>
                 </ul>
             </div>
