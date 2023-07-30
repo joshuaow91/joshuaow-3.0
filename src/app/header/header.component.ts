@@ -3,6 +3,7 @@ import { Router, ActivatedRoute, Scroll } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { fadeAndSlideDownAnimation } from "./animations";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 @Component ({
     templateUrl: './header.component.html',
@@ -18,6 +19,22 @@ import { fadeAndSlideDownAnimation } from "./animations";
       ],
 })
 export class HeaderComponent implements OnInit {
+  isMenuOpen: boolean = false
+  screenSize: 'small' | 'medium' | 'large' = 'large'
+  menuIcon = faBars; 
+  menuItems = [
+    {name: 'Home', routerLink: '/', fragment: 'home'},
+    {name: 'Work', routerLink: '/', fragment: 'work'},
+    {name: 'About', routerLink: '/', fragment: 'about'},
+    {name: 'Contact', routerLink: '/', fragment: 'contact'}
+  ]; 
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+
+    this.menuIcon = this.isMenuOpen ? faTimes : faBars;
+  }
+
     constructor(private router: Router, private route: ActivatedRoute) {}
   
     ngOnInit() {
@@ -46,6 +63,8 @@ export class HeaderComponent implements OnInit {
             }, 0);
           }
         });
+        this.setScreenSize();
+
       }
     isHidden = false;
     lastScrollTop = 0;
@@ -60,5 +79,24 @@ export class HeaderComponent implements OnInit {
           this.isHidden = false;
         }
         this.lastScrollTop = currentScrollTop;
+    }
+
+    @HostListener('window:resize', ['$event'])
+    onResize() {
+        this.setScreenSize();
+    }
+
+    private setScreenSize(): void {
+        const width = window.innerWidth;
+        if (width < 640) {
+            this.screenSize = 'small';
+        } else if (width < 1024) {
+            this.screenSize = 'medium';
+        } else {
+            this.screenSize = 'large';
+        }
+        if (this.screenSize === 'large') {
+            this.isMenuOpen = false;
+        }
     }
 }

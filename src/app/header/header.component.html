@@ -5,27 +5,30 @@
     id="home"
     >
 
-    <div class="flex justify-center ">
-    <nav @fadeAndSlideDown
-        [ngClass]="{
-            '-translate-y-full': isHidden, 
-            'translate-y-0': !isHidden
-        }" 
-        class="fixed top-0 w-full bg-zinc-100 bg-opacity-80 backdrop-blur-md z-50 px-4 xl:px-0 transition-transform duration-500 ease-in-out flex items-center justify-between  py-4 ">
-    <div class="max-w-screen-lg flex justify-between w-full mx-auto">
-        <a [routerLink]="['/']" fragment="home" class=" text-zinc-700 font-medium text-lg hover:scale-110 transition-all ease-linear duration-300  flex gap-2 items-center">   
-            <span class="bg-gradient-to-r from-blue-400 to-emerald-400 tracking-tighter text-4xl font-black text-transparent bg-clip-text">JO</span> 
-        </a>
-        <ul class="flex items-center gap-6 sm:gap-10 font-medium tracking-wide text-zinc-700 text-base  ">
-            <a [routerLink]="['/']" fragment="home" class="hover:text-zinc-600     "><li>Home</li></a>
-            <a [routerLink]="['/']" fragment="work" class="hover:text-zinc-600     "><li>Work</li></a>
-            <a [routerLink]="['/']" fragment="about" class="hover:text-zinc-600  "><li>About</li></a>
-            <a [routerLink]="['/']" fragment="contact" class="hover:text-zinc-600  "><li>Contact</li></a>
-        </ul>
+    <div class="flex justify-center">
+        <nav class="fixed top-0 w-full bg-zinc-100 bg-opacity-5 backdrop-blur-md z-50 px-4 xl:px-0 transition-transform duration-500 ease-in-out flex items-center justify-between py-4">
+            <div class="max-w-screen-lg flex flex-col lg:flex-row justify-between w-full mx-auto">
+                <div class="flex justify-between items-center">
+                    <a [routerLink]="['/']" fragment="home" class="text-zinc-700 font-medium text-xl hover:scale-110 transition-all ease-linear duration-300 flex gap-2 items-center">
+                        <span class="bg-gradient-to-br from-blue-400 to-emerald-400 tracking-tighter h-5 w-5 rounded-full"></span> Joshua Ow
+                    </a>
+            
+                    <button (click)="toggleMenu()" class="lg:hidden">
+                        <fa-icon [icon]="menuIcon" class="text-xl text-zinc-700"></fa-icon>
+                    </button>
+                </div>
+        
+                <ul *ngIf="isMenuOpen || screenSize === 'large'" class="flex lg:flex-row flex-col gap-4 lg:gap-6 font-medium tracking-wide text-zinc-700 text-base w-full mt-6 lg:mt-0 lg:w-auto lg:items-center">
+                    <li *ngFor="let item of menuItems">
+                        <a [routerLink]="[item.routerLink]" fragment="item.fragment" class="hover:text-zinc-600">{{item.name}}</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
+    
+    
 
-    </nav>
-    </div>
 
     <div @fadeIn class="flex items-center mt-36 sm:mt-56 mb-20 sm:mb-40 justify-center lg:justify-start max-w-screen-lg mx-auto w-full ">
         <div class="flex flex-col font-semibold items-center md:items-start text-5xl md:text-7xl lg:text-7xl gap-2 text-zinc-700">
@@ -36,17 +39,17 @@
                 </span>
 
                 <!-- mobile -->
-                <span class="flex flex-col font-semibold tracking-tighter text-5xl sm:hidden px-2">
+                <span class="flex flex-col font-semibold tracking-tighter text-5xl sm:hidden px-4">
                     <span class="">Hello! I'm Josh, a</span>
                     <span class=" bg-gradient-to-r from-blue-400 to-emerald-400 text-transparent bg-clip-text">Full Stack Developer</span> 
                     <span class="">based in Texas.</span>
                 </span>
                 <!-- end mobile -->
 
-                <p class="tracking-tighter w-full pl-2 mx-auto sm:px-0 text-xl md:text-3xl lg:text-3xl font-light mt-3 sm:mt-3 self-center md:self-start ">I turn <span class=" bg-gradient-to-r text-transparent bg-clip-text from-blue-400 to-emerald-400">ideas</span> into cutting-edge <span class=" bg-gradient-to-r text-transparent bg-clip-text from-blue-400 to-emerald-400">software</span>. </p>
+                <p class="tracking-tighter w-full pl-4 mx-auto sm:px-0 text-xl md:text-3xl lg:text-3xl font-light mt-3 sm:mt-3 self-center md:self-start ">I turn <span class=" italic">ideas</span> into cutting-edge <span class=" italic">software</span>. </p>
             </div>
 
-            <ul class="flex gap-6 text-sm sm:text-base font-medium mt-4 sm:mt-12 self-start p-2  sm:p-0">
+            <ul class="flex gap-6 text-sm sm:text-base font-medium mt-4 sm:mt-12 self-start p-4  sm:p-0">
                 <li class="hover:-translate-y-1 transition-all ease-linear duration-300 ">
                     <a [routerLink]="['/']" fragment="contact" 
                         class=" rounded-full bg-blue-400 text-zinc-50  transition-all ease-linear duration-300 p-2.5 px-4  sm:p-3 sm:px-6">Start a project</a>
