@@ -16,6 +16,12 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
             animate('800ms', style({ opacity: 1 })),
           ]),
         ]),
+        trigger('slideInOut', [
+          state('in', style({transform: 'translateY(0)'})),
+          state('out', style({transform: 'translateY(-100%)'})),
+          transition('in => out', animate('400ms ease-in-out')),
+          transition('out => in', animate('400ms ease-in-out'))
+        ]),
       ],
 })
 export class HeaderComponent implements OnInit {
@@ -71,15 +77,15 @@ export class HeaderComponent implements OnInit {
     
     @HostListener('window:scroll', [])
     onWindowScroll() {
-        const currentScrollTop = window.scrollY || document.documentElement.scrollTop;
-        if (currentScrollTop > 100) {
-          this.isHidden = currentScrollTop > this.lastScrollTop;
-        }
-        else {
-          this.isHidden = false;
-        }
-        this.lastScrollTop = currentScrollTop;
+      const currentScrollTop = window.scrollY || document.documentElement.scrollTop;
+      if (currentScrollTop > 100) {
+        this.isHidden = currentScrollTop > this.lastScrollTop;
+      } else {
+        this.isHidden = false;
+      }
+      this.lastScrollTop = currentScrollTop;
     }
+    
 
     @HostListener('window:resize', ['$event'])
     onResize() {
