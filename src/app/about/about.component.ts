@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { faReact, faAngular, faJs, faJira, faGitAlt, faNodeJs,  } from "@fortawesome/free-brands-svg-icons";
+import { faCode, faComments, faLightbulb, faProjectDiagram, faPuzzlePiece, faSync, faUserCheck, faUserFriends } from "@fortawesome/free-solid-svg-icons";
 
 
 @Component ({
@@ -15,4 +16,10 @@ export class AboutComponent {
     faJira = faJira
     faGit = faGitAlt
     faNode = faNodeJs
+    faCode = faCode
+    faLight = faLightbulb
+    faSync = faSync
+    faComments = faComments
+    faUser = faUserFriends
+    faUserCheck = faUserCheck
 }

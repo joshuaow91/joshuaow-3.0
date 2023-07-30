@@ -1,6 +1,7 @@
 <header class="
     flex flex-col
-    bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white via-zinc-300 to-zinc-50"
+    bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white via-zinc-200 to-zinc-50
+    " 
     id="home"
     >
 
@@ -10,50 +11,49 @@
             '-translate-y-full': isHidden, 
             'translate-y-0': !isHidden
         }" 
-        class="fixed top-0 w-full bg-zinc-100 bg-opacity-5 backdrop-blur-md z-50 px-4 xl:px-0 transition-transform duration-500 ease-in-out flex items-center justify-between  pt-3 ">
-    <div class="max-w-screen-xl flex justify-between w-full mx-auto">
-        <a [routerLink]="['/']" fragment="home" class="font-black text-zinc-700  text-3xl hover:scale-110 transition-all ease-linear duration-300  flex flex-col items-center">   
-            <span class="bg-gradient-to-r from-blue-400 to-emerald-400 text-transparent bg-clip-text">JO</span>
-            <span class="-translate-y-3 bg-gradient-to-r from-blue-400 to-emerald-400 text-transparent bg-clip-text">SH</span>
+        class="fixed top-0 w-full bg-zinc-100 bg-opacity-80 backdrop-blur-md z-50 px-4 xl:px-0 transition-transform duration-500 ease-in-out flex items-center justify-between  py-4 ">
+    <div class="max-w-screen-lg flex justify-between w-full mx-auto">
+        <a [routerLink]="['/']" fragment="home" class=" text-zinc-700 font-medium text-lg hover:scale-110 transition-all ease-linear duration-300  flex gap-2 items-center">   
+            <span class="bg-gradient-to-r from-blue-400 to-emerald-400 text-4xl font-black text-transparent bg-clip-text">JO</span> 
         </a>
-        <ul class="flex items-center  font-medium tracking-wide text-zinc-500 text-lg  ">
-            <a [routerLink]="['/']" fragment="work" class="hover:bg-zinc-50 px-6 py-1.5 rounded-2xl  transition-all ease-linear duration-300  "><li>Work</li></a>
-            <a [routerLink]="['/']" fragment="about" class="hover:bg-zinc-50 px-4 py-1.5  rounded-2xl transition-all ease-linear duration-300"><li>About</li></a>
-            <a [routerLink]="['/']" fragment="contact" class="hover:bg-zinc-50 px-6 py-1.5 rounded-2xl transition-all ease-linear duration-300"><li>Contact</li></a>
+        <ul class="flex items-center gap-6 sm:gap-10 font-medium tracking-wide text-zinc-700 text-base  ">
+            <a [routerLink]="['/']" fragment="home" class="hover:text-zinc-600     "><li>Home</li></a>
+            <a [routerLink]="['/']" fragment="work" class="hover:text-zinc-600     "><li>Work</li></a>
+            <a [routerLink]="['/']" fragment="about" class="hover:text-zinc-600  "><li>About</li></a>
+            <a [routerLink]="['/']" fragment="contact" class="hover:text-zinc-600  "><li>Contact</li></a>
         </ul>
     </div>
 
     </nav>
     </div>
 
-    <div @fadeIn class="flex items-center mt-36 sm:mt-56 mb-20 sm:mb-40 justify-center">
-        <div class="flex flex-col font-semibold items-center md:items-start text-7xl md:text-7xl lg:text-8xl gap-2 text-zinc-700">
+    <div @fadeIn class="flex items-center mt-36 sm:mt-56 mb-20 sm:mb-40 justify-center lg:justify-start max-w-screen-lg mx-auto w-full ">
+        <div class="flex flex-col font-semibold items-center md:items-start text-5xl md:text-7xl lg:text-7xl gap-2 text-zinc-700">
 
             <div class="flex flex-col items-center ">
-                <span class="hidden sm:block">
-                    Hello! I'm <span class="">Josh</span>, a<br/> <span class="bg-gradient-to-r from-blue-400 to-emerald-400 text-transparent bg-clip-text">Software Engineer</span><br/> based in Texas.
+                <span class="hidden sm:block tracking-tighter">
+                    Hello! I'm <span class="">Josh</span>, a<br/> <span class="bg-gradient-to-r from-blue-400 to-emerald-400 text-transparent bg-clip-text">Full Stack Developer</span><br/> based in Texas.
                 </span>
 
                 <!-- mobile -->
-                <span class="flex flex-col font-black tracking-tighter text-4xl sm:hidden px-2">
+                <span class="flex flex-col font-semibold tracking-tighter text-5xl sm:hidden px-2">
                     <span class="">Hello! I'm Josh, a</span>
-                    <!-- <span class="">I'm Josh, a</span>  -->
-                    <span class="tracking-normal bg-gradient-to-r from-blue-400 to-emerald-400 text-transparent bg-clip-text">Software Engineer</span> 
+                    <span class=" bg-gradient-to-r from-blue-400 to-emerald-400 text-transparent bg-clip-text">Full Stack Developer</span> 
                     <span class="">based in Texas.</span>
                 </span>
                 <!-- end mobile -->
 
-                <p class=" w-full pl-2 mx-auto sm:px-0 text-lg md:text-3xl lg:text-4xl font-light mt-3 sm:mt-3 self-center md:self-start">I turn <span class="italic">ideas</span> into cutting-edge <span class="italic">software</span>. </p>
+                <p class="tracking-tighter w-full pl-2 mx-auto sm:px-0 text-xl md:text-3xl lg:text-3xl font-light mt-3 sm:mt-3 self-center md:self-start ">I turn <span class=" bg-gradient-to-r text-transparent bg-clip-text from-blue-400 to-emerald-400">ideas</span> into cutting-edge <span class=" bg-gradient-to-r text-transparent bg-clip-text from-blue-400 to-emerald-400">software</span>. </p>
             </div>
 
             <ul class="flex gap-6 text-sm sm:text-base font-medium mt-4 sm:mt-12 self-start p-2  sm:p-0">
                 <li class="hover:-translate-y-1 transition-all ease-linear duration-300 ">
                     <a [routerLink]="['/']" fragment="contact" 
-                        class="border border-zinc-500 rounded-full bg-zinc-200 hover:bg-white transition-all ease-linear duration-300 p-2.5 px-4  sm:p-4 sm:px-6">Start a project</a>
+                        class=" rounded-full bg-blue-400 text-zinc-50  transition-all ease-linear duration-300 p-2.5 px-4  sm:p-3 sm:px-6">Start a project</a>
                 </li>
                 <li class="hover:-translate-y-1 transition-all ease-linear duration-300">
                     <a [routerLink]="['/']" fragment="work" 
-                    class="border border-zinc-500 rounded-full bg-zinc-200 hover:bg-white transition-all ease-linear duration-300 p-2.5 px-4  sm:p-4 sm:px-6 ">See my work</a>
+                    class=" rounded-full bg-zinc-300 text-blue-500  transition-all ease-linear duration-300 p-2.5 px-4  sm:p-3 sm:px-6 ">See my work</a>
                 </li>
             </ul>
 
