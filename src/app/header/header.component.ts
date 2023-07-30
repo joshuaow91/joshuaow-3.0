@@ -1,7 +1,7 @@
 import { Component, HostListener, OnInit } from "@angular/core";
 import { Router, ActivatedRoute, Scroll } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { trigger, transition, style, animate } from '@angular/animations';
+import { trigger, transition, style, animate, state } from '@angular/animations';
 import { fadeAndSlideDownAnimation } from "./animations";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
