@@ -1,6 +1,22 @@
-<div class="flex flex-col justify-center items-center max-w-screen-xl my-10 mb-10 mx-auto gap-16" id="about">
+<div class="flex flex-col justify-center items-center max-w-screen-xl my-10 mb-10 mx-auto gap-10 bg-white rounded-2xl md:p-4 md:px-4 xl:px-0 pb-8" id="about">
 
-    <div class="flex items-center gap-8 w-full px-4 xl:px-0">
+
+    <div class="relative flex h-32 w-full justify-center rounded-xl px-4" >
+        <span class="bg-gradient-to-br h-28 w-full flex flex-col gap-4 p-4 rounded-xl from-blue-400 to-emerald-400">
+        </span>
+        <div class="absolute -bottom-14 right-10 md:left-14 flex h-32 w-32 items-center justify-center rounded-full border-4 border-zinc-50 bg-blue-400">
+            <img class="h-full w-full rounded-full" src='../../assets/avatar.png' alt="" />
+        </div>
+        
+    </div> 
+    <div class="flex flex-col md:items-center w-full md:mt-8 gap-4 px-4 md:px-8">
+        <h2 class="text-zinc-800 font-bold text-3xl sm:text-5xl">About Me</h2>
+        <p class=" text-base sm:text-lg font-light text-zinc-800 md:mt-0">
+            In my role as a Software Engineer, I focus on the these key areas:
+        </p>
+    </div>
+
+    <!-- <div class="flex items-center gap-8 w-full px-4 xl:px-0">
         <img src="../../assets/avatar.png" class="w-32 h-32 rounded-3xl bg-gradient-to-br from-blue-400 to-emerald-400" alt=""/>
         <div class="flex flex-col gap-4">
             <h2 class="text-zinc-700 font-bold text-3xl sm:text-5xl">About Me</h2>
@@ -8,36 +24,39 @@
                 In my role as a Software Engineer, I focus on the following key areas:
             </p>
         </div>
-    </div>
+    </div> -->
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 px-4 xl:px-0">
-        <p class="flex flex-col gap-2 text-zinc-700 font-light text-base border p-4 rounded-2xl ">
-            <span class="text-zinc-700 font-medium text-lg flex flex-col gap-6"><fa-icon [icon]="faCode" class="text-5xl text-blue-400"/>Programming Concepts</span>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 px-4 md:px-8 md:mt-8">
+        <p class="flex flex-col gap-2 text-zinc-700 font-light text-base  ">
+            <span class="text-zinc-700 font-medium text-lg flex flex-col gap-6"><fa-icon [icon]="faCode" class="text-3xl text-blue-400"/>Programming Concepts</span>
             I have a strong grasp of programming concepts, fluency in various languages and databases, and a knack for swift adaptation to new technologies, ensuring readiness for shifting project needs.
         </p>
-        <p class="flex flex-col gap-2 text-zinc-700 font-light text-base border p-4 rounded-2xl ">
-            <span class="text-zinc-700 font-medium text-lg flex flex-col gap-6"><fa-icon [icon]="faLight" class="text-5xl text-blue-400"/>Problem-Solving</span>
+        <p class="flex flex-col gap-2 text-zinc-700 font-light text-base  ">
+            <span class="text-zinc-700 font-medium text-lg flex flex-col gap-6"><fa-icon [icon]="faLight" class="text-3xl text-blue-400"/>Problem-Solving</span>
             I've honed problem-solving skills, specializing in decomposing complex issues, innovating solutions, and efficient debugging, all while thriving on the challenges and satisfaction derived from crafting effective outcomes.
         </p>
-        <p class="flex flex-col gap-2 text-zinc-700 font-light text-base border p-4 rounded-2xl ">
-            <span class="text-zinc-700 font-medium text-lg flex flex-col gap-6"><fa-icon [icon]="faSync" class="text-5xl text-blue-400"/>Lifecycles and Methodologies</span>
+        <p class="flex flex-col gap-2 text-zinc-700 font-light text-base  ">
+            <span class="text-zinc-700 font-medium text-lg flex flex-col gap-6"><fa-icon [icon]="faSync" class="text-3xl text-blue-400"/>Lifecycles and Methodologies</span>
             With a deep understanding of the software development lifecycle and proficiency in Agile and Scrum methodologies, I skillfully adapt to varied team dynamics and project needs, ensuring an efficient and effective development process.
         </p>
-        <p class="flex flex-col gap-2 text-zinc-700 font-light text-base border p-4 rounded-2xl ">
-            <span class="text-zinc-700 font-medium text-lg flex flex-col gap-6"><fa-icon [icon]="faComments" class="text-5xl text-blue-400"/>Communication</span>
+        <p class="flex flex-col gap-2 text-zinc-700 font-light text-base  ">
+            <span class="text-zinc-700 font-medium text-lg flex flex-col gap-6"><fa-icon [icon]="faComments" class="text-3xl text-blue-400"/>Communication</span>
             I pride myself on my strong communication skills. Whether I'm explaining complex technical concepts to non-technical team members, or discussing project requirements with clients, I strive for clarity, precision, and a mutual understanding.
         </p>
-        <p class="flex flex-col gap-2 text-zinc-700 font-light text-base border p-4 rounded-2xl ">
-            <span class="text-zinc-700 font-medium text-lg flex flex-col gap-6"><fa-icon [icon]="faUser" class="text-5xl text-blue-400"/>Teamwork</span>
+        <p class="flex flex-col gap-2 text-zinc-700 font-light text-base  ">
+            <span class="text-zinc-700 font-medium text-lg flex flex-col gap-6"><fa-icon [icon]="faUser" class="text-3xl text-blue-400"/>Teamwork</span>
             My experience has taught me the value of effective teamwork in software development. I believe in fostering a collaborative environment, sharing knowledge, and working cohesively with others towards a common goal.
         </p>
-        <p class="flex flex-col gap-2 text-zinc-700 font-light text-base border p-4 rounded-2xl ">
-            <span class="text-zinc-700 font-medium text-lg flex flex-col gap-6"><fa-icon [icon]="faUserCheck" class="text-5xl text-blue-400"/>Customer Orientation</span>
+        <p class="flex flex-col gap-2 text-zinc-700 font-light text-base  ">
+            <span class="text-zinc-700 font-medium text-lg flex flex-col gap-6"><fa-icon [icon]="faUserCheck" class="text-3xl text-blue-400"/>Customer Orientation</span>
             Understanding the needs of the customer is at the heart of what I do. I am dedicated to creating user-friendly, effective solutions that meet the specific needs of the end-users, ultimately helping businesses to thrive.
         </p>
     </div>
 
-    <div class="flex flex-col justify-start items-center gap-6 w-full px-4 xl:px-0">
+    <div class="flex flex-col justify-start items-center gap-6 w-full md:mt-8 px-4 xl:px-0">
+        <p class=" text-base sm:text-lg font-medium text-zinc-800  mt-8 md:mt-0">
+            My toolkit consists of the following technologies:
+        </p>
         <ul class="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-12 gap-12 lg:gap-16 mt-2">
             <li><img src="../../assets/angular.svg" alt="" class="w-10 h-10" matTooltip="Angular"></li>
             <li><img src="../../assets/react.svg" alt="" class="w-10 h-10" matTooltip="React"></li>
