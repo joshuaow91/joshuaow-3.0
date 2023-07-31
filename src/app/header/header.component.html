@@ -7,7 +7,7 @@
 
     <div class="flex justify-center">
         <nav [@slideInOut]="isHidden ? 'out' : 'in'" class="fixed top-0 w-full bg-zinc-100 bg-opacity-5 backdrop-blur-md z-50 px-4 xl:px-0 transition-transform duration-500 ease-in-out flex items-center justify-between py-4">
-            <div class="max-w-screen-lg flex flex-col lg:flex-row justify-between w-full mx-auto">
+            <div class="max-w-screen-xl flex flex-col lg:flex-row justify-between w-full mx-auto">
                 <div class="flex justify-between items-center">
                     <a [routerLink]="['/']" fragment="home" class="text-zinc-700 font-medium text-xl hover:scale-110 transition-all ease-linear duration-300 flex gap-2 items-center">
                         <span class="bg-gradient-to-br from-blue-400 to-emerald-400 tracking-tighter h-5 w-5 rounded-full"></span> Joshua Ow
@@ -30,12 +30,12 @@
     
 
 
-    <div @fadeIn class="flex items-center mt-36 sm:mt-56 mb-20 sm:mb-40 justify-center lg:justify-start max-w-screen-lg mx-auto w-full ">
+    <div @fadeIn class="flex items-center mt-36 sm:mt-56 mb-20 sm:mb-40 justify-center lg:justify-between max-w-screen-xl mx-auto w-full ">
         <div class="flex flex-col font-semibold items-center md:items-start text-5xl md:text-7xl lg:text-7xl gap-2 text-zinc-700">
 
-            <div class="flex flex-col items-center ">
+            <div class="flex flex-col items-center z-10">
                 <span class="hidden sm:block tracking-tighter">
-                    Hello! I'm <span class="">Josh</span>, a<br/> <span class="bg-gradient-to-r from-blue-400 to-emerald-400 text-transparent bg-clip-text">Full Stack Developer</span><br/> based in Texas.
+                    Hello! I'm <span class="">Josh</span>, a<br/> <span class="bg-gradient-to-br from-blue-400 to-emerald-400 text-transparent bg-clip-text">Full Stack Developer</span><br/> based in Texas.
                 </span>
 
                 <!-- mobile -->
@@ -61,6 +61,13 @@
             </ul>
 
         </div>
+
+        <!-- <span class="bg-gradient-to-br from-blue-400 to-emerald-400 h-auto w-auto p-2 px-4 rounded-xl text-zinc-600 text-xs font-thin tracking-tighter">
+            <pre>
+              <code [innerHTML]="codeBlock"></code>
+            </pre>
+          </span> -->
+
     </div>
     
 

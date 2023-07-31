@@ -1,4 +1,4 @@
-<div @fadeIn class="flex flex-col  items-center max-w-screen-lg  mx-auto my-14 mb-20 px-4 gap-16  xl:px-0 " id="work">
+<div @fadeIn class="flex flex-col  items-center max-w-screen-xl  mx-auto my-14 mb-20 px-4 gap-16  xl:px-0 " id="work">
 
     <div class="flex flex-col lg:flex-row w-full  gap-10 justify-center">
 
@@ -27,11 +27,22 @@
     </div>
 
 
-    <div class="w-full  rounded-3xl  flex flex-col gap-6">
-        <h2 class="text-3xl text-zinc-700 font-bold ">
-            Project Overview
-        </h2>
-        <div class=" grid sm:grid-cols-2 md:grid-cols-2 gap-6">
+    <div class="w-full  rounded-3xl  flex flex-col gap-2">
+
+        <div class="flex space-x-6 mb-4">
+            <h2 (click)="selectedTab = 'overview'" 
+                class="text-base sm:text-xl text-zinc-700 font-bold cursor-pointer bg-blue-100 p-3 px-4 rounded-xl" 
+                [ngClass]="{'text-blue-400 bg-blue-200': selectedTab === 'overview'}">
+                Project Overview
+            </h2>
+            <h2 (click)="selectedTab = 'lessons'" 
+                class="text-base sm:text-xl text-zinc-700 font-bold cursor-pointer bg-blue-100 p-3 px-4 rounded-xl" 
+                [ngClass]="{'text-blue-400 bg-blue-200': selectedTab === 'lessons'}">
+                Lessons Learned
+            </h2>
+        </div>
+
+        <div *ngIf="selectedTab === 'overview'" class=" grid sm:grid-cols-2 md:grid-cols-3 gap-6">
             <p class="flex flex-col gap-2 font-light text-base text-zinc-700 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 rounded-2xl p-4 ">
                 <span class="font-medium text-lg ">Problem</span>
                 A manual, Excel-based options chain contest was complex and inefficient, making data retrieval difficult and slowing decision-making processes. The lack of interactive elements and incentives led to low user engagement.
@@ -62,6 +73,39 @@
                 This software engineering project effectively solved a complex problem, transforming a manual process into an automated one, boosting operational efficiency, enhancing decision-making, and fostering business development.
             </p>
         </div>
+
+        <div *ngIf="selectedTab === 'lessons'" class=" grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <p class="flex flex-col gap-2 font-light text-base text-zinc-700 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 rounded-2xl p-4 ">
+                <span class="font-medium text-lg ">Iterative Development and Testing</span>
+                The development process highlighted the value of an iterative approach, where feedback and testing play a key role. By building, testing, and refining in cycles, the final product was more robust and effective.           
+            </p>
+
+            <p class="flex flex-col gap-2 font-light text-base text-zinc-700 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 rounded-2xl p-4">
+                <span class="font-medium text-lg">Importance of UI/UX</span>
+                User interaction and engagement can be significantly improved by effective user interface and user experience design. Our adoption of a dynamic leaderboard serves as an excellent example of this, promoting competition and commitment amongst users.            
+            </p>
+
+            <p class="flex flex-col gap-2 font-light text-base text-zinc-700 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 rounded-2xl p-4">
+                <span class="font-medium text-lg ">Automation Efficiency</span>
+                Transitioning from a manual to an automated system demonstrated the immense potential of automation in enhancing operational efficiency and accuracy. It reiterated that automation should be a priority in areas of high-frequency, repetitive tasks, or complex calculations.
+            </p>
+
+            <p class="flex flex-col gap-2 font-light text-base text-zinc-700 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 rounded-2xl p-4">
+                <span class="font-medium text-lg ">Data Accessibility</span>
+                Recognizing the importance of efficient data retrieval and the role it plays in decision-making. The custom search tool dramatically improved data accessibility, expediting the decision-making process.
+            </p>
+
+            <p class="flex flex-col gap-2 font-light text-base text-zinc-700 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 rounded-2xl p-4">
+                <span class="font-medium text-lg ">The impact of automation on productivity</span>
+                The project served as a vivid reminder of the transformative potential of automation, showcasing how manual tasks can be made more efficient, thus freeing up resources for other important work.
+            </p>
+
+            <p class="flex flex-col gap-2 font-light text-base text-zinc-700 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 rounded-2xl p-4">
+                <span class="font-medium text-lg ">Conclusion</span>
+                This experience has significantly contributed to my professional growth as a software engineer, underlining the importance of user-centered design, rigorous testing, efficient problem-solving, and effective project management.
+            </p>
+        </div>
+
     </div>
 
 

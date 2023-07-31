@@ -25,6 +25,27 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
       ],
 })
 export class HeaderComponent implements OnInit {
+  codeBlock: string = `
+  export class AboutMeComponent {
+      personalInfo = {
+          name: 'Joshua Ow',
+          profession: 'Software Engineer',
+          location: 'TX',
+          bio: 'I am a passionate software 
+          engineer with experience in various 
+          technologies such as Angular, React, 
+          TypeScript, and Node.js. I enjoy 
+          problem-solving nad 
+          learning new technologies.
+      };
+
+      displayPersonalInfo() {
+          console.log(\`Name: \${this.personalInfo.name}\`);
+          console.log(\`Profession: \${this.personalInfo.profession}\`);
+          console.log(\`Location: \${this.personalInfo.location}\`);
+          console.log(\`Bio: \${this.personalInfo.bio}\`);
+      }
+  }`;
   isMenuOpen: boolean = false
   screenSize: 'small' | 'medium' | 'large' = 'large'
   menuIcon = faBars; 
