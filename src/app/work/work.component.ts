@@ -17,8 +17,11 @@ import { trigger, transition, style, animate } from '@angular/animations';
 
 export class WorkComponent {
     arrowUp = faArrowUpRightFromSquare
-    // selectedTab: 'overview' | 'lessons' = 'overview';
     selectedTab: string = 'overview';
+    darkMode = false;
 
+    toggleDarkMode() {
+      this.darkMode = !this.darkMode;
+    }
 
 }

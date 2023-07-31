@@ -3,7 +3,7 @@ import { Router, ActivatedRoute, Scroll } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { trigger, transition, style, animate, state } from '@angular/animations';
 import { fadeAndSlideDownAnimation } from "./animations";
-import { faBars, faTimes, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTimes, faEnvelope, faLayerGroup } from "@fortawesome/free-solid-svg-icons";
 import { faTwitter, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 @Component ({
@@ -26,6 +26,7 @@ import { faTwitter, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-ic
       ],
 })
 export class HeaderComponent implements OnInit {
+  faLayer = faLayerGroup
   twitter = faTwitter
   linkedin = faLinkedin
   github = faGithub
