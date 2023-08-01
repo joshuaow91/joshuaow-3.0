@@ -9,18 +9,18 @@
         <nav [@slideInOut]="isHidden ? 'out' : 'in'" class="fixed top-0 w-full bg-zinc-100 bg-opacity-5 backdrop-blur-md z-50 px-4 xl:px-0 transition-transform duration-500 ease-in-out flex items-center justify-between py-4">
             <div class="max-w-screen-xl flex flex-col lg:flex-row justify-between w-full mx-auto">
                 <div class="flex justify-between items-center">
-                    <a [routerLink]="['/']" fragment="home" class="text-zinc-700 font-medium text-xl hover:scale-110 transition-all ease-linear duration-300 flex gap-2 items-center">
+                    <a [routerLink]="['/']" fragment="home" alt="home" class="text-zinc-700 font-medium text-xl hover:scale-110 transition-all ease-linear duration-300 flex gap-2 items-center">
                         <span class="bg-gradient-to-br from-blue-400 to-emerald-400 tracking-tighter h-5 w-5 rounded-full"></span> Joshua Ow
                     </a>
             
-                    <button (click)="toggleMenu()" class="lg:hidden ">
+                    <button (click)="toggleMenu()" class="lg:hidden " aria-label="menu toggle open and close">
                         <fa-icon [icon]="menuIcon" class="text-xl text-zinc-700"></fa-icon>
                     </button>
                 </div>
         
                 <ul *ngIf="isMenuOpen || screenSize === 'large'" class="flex lg:flex-row flex-col gap-4 lg:gap-6 font-medium tracking-wide text-zinc-700 text-base w-full mt-6 lg:mt-0 lg:w-auto lg:items-center">
                     <li *ngFor="let item of menuItems">
-                        <a [routerLink]="[item.routerLink]" [fragment]="item.fragment" class="hover:text-zinc-500" (click)="toggleMenu()">{{item.name}}</a>
+                        <a [routerLink]="[item.routerLink]" alt="item.alt" [fragment]="item.fragment" class="hover:text-zinc-500" (click)="toggleMenu()">{{item.name}}</a>
                     </li>
                 </ul>
             </div>
@@ -51,11 +51,11 @@
 
             <ul class="flex gap-6 text-sm sm:text-base font-medium mt-4 sm:mt-12 self-start p-4  sm:p-0">
                 <li class="hover:-translate-y-1 transition-all ease-linear duration-300 ">
-                    <a [routerLink]="['/']" fragment="contact" 
+                    <a [routerLink]="['/']" fragment="contact" alt="contact"
                         class=" rounded-full bg-blue-400 text-zinc-50  transition-all ease-linear duration-300 p-2.5 px-4  sm:p-3 sm:px-6">Start a project</a>
                 </li>
                 <li class="hover:-translate-y-1 transition-all ease-linear duration-300">
-                    <a [routerLink]="['/']" fragment="work" 
+                    <a [routerLink]="['/']" fragment="work" alt="work"
                     class=" rounded-full bg-slate-100 border border-zinc-300 text-blue-400  transition-all ease-linear duration-300 p-2.5 px-4  sm:p-3 sm:px-6 ">See my work</a>
                 </li>
             </ul>

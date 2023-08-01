@@ -35,10 +35,10 @@ export class HeaderComponent implements OnInit {
   screenSize: 'small' | 'medium' | 'large' = 'large'
   menuIcon = faBars; 
   menuItems = [
-    {name: 'Home', routerLink: '/', fragment: 'home'},
-    {name: 'Work', routerLink: '/', fragment: 'work'},
-    {name: 'About', routerLink: '/', fragment: 'about'},
-    {name: 'Contact', routerLink: '/', fragment: 'contact'}
+    {name: 'Home', routerLink: '/', fragment: 'home', alt: 'home'},
+    {name: 'Work', routerLink: '/', fragment: 'work', alt: 'work'},
+    {name: 'About', routerLink: '/', fragment: 'about', alt: 'about'},
+    {name: 'Contact', routerLink: '/', fragment: 'contact', alt: 'contact'}
   ]; 
 
   toggleMenu(): void {
