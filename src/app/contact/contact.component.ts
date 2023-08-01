@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { faArrowUpRightFromSquare, faEnvelope } from "@fortawesome/free-solid-svg-icons"
-import { faTwitter, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter, faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 @Component ({
     selector: 'app-contact',
@@ -10,7 +10,7 @@ import { faTwitter, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-ic
 export class ContactComponent {
     arrowUp = faArrowUpRightFromSquare
     twitter = faTwitter
-    linkedin = faLinkedin
+    linkedin = faLinkedinIn
     github = faGithub
     email = faEnvelope
 }
