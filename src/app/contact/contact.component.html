@@ -11,16 +11,16 @@
             </div>
             
             <div class="gap-8 flex flex-col">
-                <a href="mailto:joshuaow@gmail.com" target="_blank" alt="contact, send an email" class=" flex gap-2 items-center justify-center text-zinc-100 bg-blue-400 rounded-lg py-2.5 hover:-translate-y-1 transition-all ease-linear duration-300 px-4 font-semibold">
+                <a [href]="links.email" target="_blank" alt="contact, send an email" class=" flex gap-2 items-center justify-center text-zinc-100 bg-blue-400 rounded-lg py-2.5 hover:-translate-y-1 transition-all ease-linear duration-300 px-4 font-semibold">
                     <svg 
                         class="w-6 h-6 text-zinc-100  " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 2-8.4 7.05a1 1 0 0 1-1.2 0L1 2m18 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1m18 0v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2"/>
                   </svg> Contact me</a>
            
                 <ul class="flex gap-6 sm:gap-6 justify-center text-lg font-medium text-zinc-700">
-                    <li><a href="https://www.linkedin.com/in/JoshuaOwDev" target="_blank" alt="linked in" class="hover:text-zinc-500 flex flex-col items-center"><fa-icon [icon]="linkedin" class="text-2xl text-zinc-500 hover:text-zinc-700  "/></a></li>
-                    <li><a href="https://www.twitter.com/JoshuaOwDev" target="_blank" alt="twitter" class="hover:text-zinc-500 flex flex-col items-center"><fa-icon [icon]="twitter" class="text-2xl text-zinc-500 hover:text-zinc-700 "/></a></li>
-                    <li><a href="https://www.github.com/joshuaow91" target="_blank" alt="github" class="hover:text-zinc-500 flex flex-col items-center"><fa-icon [icon]="github" class="text-2xl text-zinc-500 hover:text-zinc-700"/></a></li>
+                    <li><a [href]="links.linkedin" target="_blank" alt="linked in" class="hover:text-zinc-500 flex flex-col items-center"><fa-icon [icon]="linkedin" class="text-2xl text-zinc-500 hover:text-zinc-700  "/></a></li>
+                    <li><a [href]="links.twitter" target="_blank" alt="twitter" class="hover:text-zinc-500 flex flex-col items-center"><fa-icon [icon]="twitter" class="text-2xl text-zinc-500 hover:text-zinc-700 "/></a></li>
+                    <li><a [href]="links.github" target="_blank" alt="github" class="hover:text-zinc-500 flex flex-col items-center"><fa-icon [icon]="github" class="text-2xl text-zinc-500 hover:text-zinc-700"/></a></li>
                 </ul>
             </div>
         </div>

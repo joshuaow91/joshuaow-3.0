@@ -13,4 +13,11 @@ export class ContactComponent {
     linkedin = faLinkedinIn
     github = faGithub
     email = faEnvelope
+
+    links = {
+        email: 'mailto:joshuaow@gmail.com',
+        twitter: 'https://www.twitter.com/JoshuaOwDev',
+        linkedin: 'https://www.linkedin.com/in/JoshuaOwDev',
+        github: 'https://www.github.com/joshuaow91'
+    }
 }

@@ -21,7 +21,7 @@
             <span class=" items-end text-base md:text-lg text-zinc-700 font-light mt-4">
                 <span class="font-medium mr-2">Stack:</span> {{battleOptions.stack}}
             </span>
-            <a href={{battleOptions.link}} target="_blank" alt="view battle options project" class="mt-8 text-lg font-medium text-zinc-700 hover:text-zinc-500 w-36">
+            <a [href]="battleOptions.link" target="_blank" alt="view battle options project" class="mt-8 text-lg font-medium text-zinc-700 hover:text-zinc-500 w-36">
                 View Project 
                 <fa-icon [icon]="arrowUp" class="text-blue-400 ml-2"/>
             </a>
