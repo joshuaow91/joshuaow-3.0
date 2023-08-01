@@ -4,24 +4,24 @@
 
         <div class="flex flex-col gap-1 sm:gap-3  lg:w-1/2">
             <h2 class="text-3xl sm:text-5xl text-zinc-700 font-bold">
-                BattleOptions
+                {{battleOptions.title}}
             </h2>
-            <span class=" text-xl font-light text-zinc-500">Full Stack Development</span>
+            <span class=" text-xl font-light text-zinc-500">{{battleOptions.type}}</span>
 
             <span class="font-light text-base sm:text-lg text-zinc-700 mt-4">
                 <ul class="space-y-2">
-                    <li>This real-time platform offers users a modern approach to financial market data. By providing a dedicated search tool for selecting and tracking options contracts, the platform encourages engagement through a trading contest and an interactive leaderboard for peer performance comparison.</li>
+                    <li>{{battleOptions.desc.one}}</li>
                     
-                    <li>Designed to synergize with the company's premium Discord channel, the platform both extends the existing educational services and acts as a lead magnet. It effectively leverages the trading competition and a snapshot of educational resources to drive traffic and increase community engagement.</li>
+                    <li>{{battleOptions.desc.two}}</li>
                 
-                    <li>In summary, this project integrates data-driven insights, user-friendly design, real-time updates, and a preview of comprehensive trader education, to provide a holistic view of options trading and to drive growth for the company.</li>
+                    <li>{{battleOptions.desc.three}}</li>
                 </ul>
                   
             </span>
             <span class=" items-end text-base md:text-lg text-zinc-700 font-light mt-4">
-                <span class="font-medium mr-2">Stack:</span> React | Node | Express | MongoDB | Tailwind
+                <span class="font-medium mr-2">Stack:</span> {{battleOptions.stack}}
             </span>
-            <a href="https://contest.stratalerts.com/" target="_blank" alt="view battle options project" class="mt-8 text-lg font-medium text-zinc-700 hover:text-zinc-500 w-36">
+            <a href={{battleOptions.link}} target="_blank" alt="view battle options project" class="mt-8 text-lg font-medium text-zinc-700 hover:text-zinc-500 w-36">
                 View Project 
                 <fa-icon [icon]="arrowUp" class="text-blue-400 ml-2"/>
             </a>
@@ -52,78 +52,29 @@
             <h2 (click)="selectedTab = 'overview'" 
                 class="text-base sm:text-xl text-zinc-700 font-bold cursor-pointer bg-blue-100 p-3 px-4 rounded-xl" 
                 [ngClass]="{'text-blue-400 bg-blue-200': selectedTab === 'overview'}">
-                Project Overview
+                {{overview.title}}
             </h2>
             <h2 (click)="selectedTab = 'lessons'" 
                 class="text-base sm:text-xl text-zinc-700 font-bold cursor-pointer bg-blue-100 p-3 px-4 rounded-xl" 
                 [ngClass]="{'text-blue-400 bg-blue-200': selectedTab === 'lessons'}">
-                Lessons Learned
+                {{lesson.title}}
             </h2>
         </div>
 
         <div *ngIf="selectedTab === 'overview'" class=" grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <p class="flex flex-col gap-2 font-light text-base text-zinc-700 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 rounded-2xl p-4 ">
-                <span class="font-medium text-lg ">Problem</span>
-                A manual, Excel-based options chain contest was complex and inefficient, making data retrieval difficult and slowing decision-making processes. The lack of interactive elements and incentives led to low user engagement.
+            <p *ngFor="let item of overviewItems" class="flex flex-col gap-2 font-light text-base text-zinc-700 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 rounded-2xl p-4">
+              <span class="font-medium text-lg ">{{item.title}}</span>
+              {{item.content}}
             </p>
-
-            <p class="flex flex-col gap-2 font-light text-base text-zinc-700 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 rounded-2xl p-4">
-                <span class="font-medium text-lg">Objective</span>
-                To automate the contest and make it real-time, with up-to-date, high-quality data, improved decision-making accuracy, and enhanced operational efficiency. An additional goal was to boost user interaction, foster user commitment, and generate business leads.
+          </div>
+          
+          <div *ngIf="selectedTab === 'lessons'" class=" grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <p *ngFor="let item of lessonItems" class="flex flex-col gap-2 font-light text-base text-zinc-700 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 rounded-2xl p-4">
+              <span class="font-medium text-lg ">{{item.title}}</span>
+              {{item.content}}
             </p>
-
-            <p class="flex flex-col gap-2 font-light text-base text-zinc-700 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 rounded-2xl p-4">
-                <span class="font-medium text-lg ">Method</span>
-                Develop a software solution to replace the Excel spreadsheet, incorporating a custom search tool for efficient data retrieval. The new platform was designed to deliver real-time results and featured a dynamic leaderboard to promote competition and user engagement.
-            </p>
-
-            <p class="flex flex-col gap-2 font-light text-base text-zinc-700 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 rounded-2xl p-4">
-                <span class="font-medium text-lg ">Implementation</span>
-                Used advanced coding techniques to build the automated platform. The custom search tool was implemented, significantly streamlining data retrieval and decision-making. A live leaderboard was added to foster competition and incentivize long-term commitment.
-            </p>
-
-            <p class="flex flex-col gap-2 font-light text-base text-zinc-700 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 rounded-2xl p-4">
-                <span class="font-medium text-lg ">Result</span>
-                The transition from a manual, Excel-based system to a real-time platform significantly improved operational efficiency and decision-making accuracy. The leaderboard sparked user engagement and has been successful in generating business leads. 
-            </p>
-
-            <p class="flex flex-col gap-2 font-light text-base text-zinc-700 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 rounded-2xl p-4">
-                <span class="font-medium text-lg ">Conclusion</span>
-                This software engineering project effectively solved a complex problem, transforming a manual process into an automated one, boosting operational efficiency, enhancing decision-making, and fostering business development.
-            </p>
-        </div>
-
-        <div *ngIf="selectedTab === 'lessons'" class=" grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <p class="flex flex-col gap-2 font-light text-base text-zinc-700 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 rounded-2xl p-4 ">
-                <span class="font-medium text-lg ">Iterative Development and Testing</span>
-                The development process highlighted the value of an iterative approach, where feedback and testing play a key role. By building, testing, and refining in cycles, the final product was more robust and effective.           
-            </p>
-
-            <p class="flex flex-col gap-2 font-light text-base text-zinc-700 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 rounded-2xl p-4">
-                <span class="font-medium text-lg">Importance of UI/UX</span>
-                User interaction and engagement can be significantly improved by effective user interface and user experience design. The adoption of a dynamic leaderboard serves as an excellent example of this, promoting competition and commitment amongst users.            
-            </p>
-
-            <p class="flex flex-col gap-2 font-light text-base text-zinc-700 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 rounded-2xl p-4">
-                <span class="font-medium text-lg ">Automation Efficiency</span>
-                Transitioning from a manual to an automated system demonstrated the immense potential of automation in enhancing operational efficiency and accuracy. It reiterated that automation should be a priority in areas of high-frequency, repetitive tasks, or complex calculations.
-            </p>
-
-            <p class="flex flex-col gap-2 font-light text-base text-zinc-700 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 rounded-2xl p-4">
-                <span class="font-medium text-lg ">Data Accessibility</span>
-                Recognizing the importance of efficient data retrieval and the role it plays in decision-making. The custom search tool dramatically improved data accessibility, expediting the decision-making process.
-            </p>
-
-            <p class="flex flex-col gap-2 font-light text-base text-zinc-700 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 rounded-2xl p-4">
-                <span class="font-medium text-lg ">The impact of automation on productivity</span>
-                The project served as a vivid reminder of the transformative potential of automation, showcasing how manual tasks can be made more efficient, thus freeing up resources for other important work.
-            </p>
-
-            <p class="flex flex-col gap-2 font-light text-base text-zinc-700 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 rounded-2xl p-4">
-                <span class="font-medium text-lg ">Conclusion</span>
-                This experience has significantly contributed to my professional growth as a software engineer, underlining the importance of user-centered design, rigorous testing, efficient problem-solving, and effective project management.
-            </p>
-        </div>
+          </div>
+          
 
     </div>
 

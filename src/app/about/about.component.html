@@ -12,52 +12,28 @@
     <div class="flex flex-col md:items-center w-full gap-4 px-8 xl:px-0">
         <h2 class="text-zinc-800 font-bold text-3xl sm:text-5xl">About Me</h2>
         <p class=" text-base sm:text-lg font-light text-zinc-800 md:mt-0">
-            In my role as a Software Engineer, I focus on the these key areas:
+            {{aboutMe.intro}}
         </p>
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 px-8 xl:px-4">
-        <p class="flex flex-col gap-2 text-zinc-700 font-light text-base  ">
-            <span class="text-zinc-700 font-medium text-lg flex items-center gap-6"><svg class="w-8 h-8 text-blue-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4 1 8l4 4m10-8 4 4-4 4M11 1 9 15"/>
-              </svg>Programming Concepts</span>
-            I have a strong grasp of programming concepts, fluency in various languages and databases, and a knack for swift adaptation to new technologies, ensuring readiness for shifting project needs.
-        </p>
-        <p class="flex flex-col gap-2 text-zinc-700 font-light text-base  ">
-            <span class="text-zinc-700 font-medium text-lg flex items-center gap-6"><svg class="w-8 h-8 text-blue-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="20" fill="none" viewBox="0 0 14 20">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7a3 3 0 0 1 3-3M5 19h4m0-3c0-4.1 4-4.9 4-9A6 6 0 1 0 1 7c0 4 4 5 4 9h4Z"/>
-              </svg>Problem-Solving</span>
-            I've honed problem-solving skills, specializing in decomposing complex issues, innovating solutions, and efficient debugging, all while thriving on the challenges and satisfaction derived from crafting effective outcomes.
-        </p>
-        <p class="flex flex-col gap-2 text-zinc-700 font-light text-base  ">
-            <span class="text-zinc-700 font-medium text-lg flex items-center gap-6"><svg class="w-8 h-8 text-blue-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 14 3-3m-3 3 3 3m-3-3h16v-3m2-7-3 3m3-3-3-3m3 3H3v3"/>
-              </svg>Lifecycles and Methodologies</span>
-            With a deep understanding of the software development lifecycle and proficiency in Agile and Scrum methodologies, I skillfully adapt to varied team dynamics and project needs, ensuring an efficient and effective development process.
-        </p>
-        <p class="flex flex-col gap-2 text-zinc-700 font-light text-base  ">
-            <span class="text-zinc-700 font-medium text-lg flex items-center gap-6"><svg class="w-8 h-8 text-blue-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5h5M5 8h2m6-3h2m-5 3h6m2-7H2a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h3v5l5-5h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z"/>
-              </svg>Communication</span>
-            I pride myself on my strong communication skills. Whether I'm explaining complex technical concepts to non-technical team members, or discussing project requirements with clients, I strive for clarity, precision, and a mutual understanding.
-        </p>
-        <p class="flex flex-col gap-2 text-zinc-700 font-light text-base  ">
-            <span class="text-zinc-700 font-medium text-lg flex items-center gap-6"><svg class="w-8 h-8 text-blue-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 3a3 3 0 1 1-1.614 5.53M15 12a4 4 0 0 1 4 4v1h-3.348M10 4.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0ZM5 11h3a4 4 0 0 1 4 4v2H1v-2a4 4 0 0 1 4-4Z"/>
-              </svg>Teamwork</span>
-            My experience has taught me the value of effective teamwork in software development. I believe in fostering a collaborative environment, sharing knowledge, and working cohesively with others towards a common goal.
-        </p>
-        <p class="flex flex-col gap-2 text-zinc-700 font-light text-base  ">
-            <span class="text-zinc-700 font-medium text-lg flex items-center gap-6"><svg class="w-8 h-8 text-blue-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 11 14H9a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 10 19Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
-              </svg>Customer Orientation</span>
-            Understanding the needs of the customer is at the heart of what I do. I am dedicated to creating user-friendly, effective solutions that meet the specific needs of the end-users, ultimately helping businesses to thrive.
-        </p>
+        <ng-container *ngFor="let item of aboutItems">
+            <p class="flex flex-col gap-2 text-zinc-700 font-light text-base  ">
+                <span class="text-zinc-700 font-medium text-lg flex items-center gap-6">
+                    <svg class="w-8 h-8 text-blue-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" [attr.viewBox]="item.viewBox">
+                        <path [attr.d]="item.svgPath" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                    {{item.title}}
+                </span>
+                {{item.content}}
+            </p>
+        </ng-container>
     </div>
+    
 
     <div class="flex flex-col justify-start items-center gap-6 w-full md:mt-6 px-4 xl:px-0">
         <p class=" text-base sm:text-lg font-medium text-zinc-800  mt-8 md:mt-0">
-            My toolkit consists of the following technologies:
+            {{aboutMe.tools}}
         </p>
         <ul class="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-12 gap-16 gap-y-8 lg:gap-16 mt-2 md:mt-8">
             <li><img src="../../assets/angular.svg" alt="" class="w-10 h-10" matTooltip="Angular"></li>
