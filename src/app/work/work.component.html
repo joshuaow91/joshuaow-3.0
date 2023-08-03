@@ -6,9 +6,9 @@
             <h2 class="text-3xl sm:text-5xl text-zinc-700 dark:text-zinc-100 font-bold">
                 {{battleOptions.title}}
             </h2>
-            <span class=" text-xl font-light text-zinc-500">{{battleOptions.type}}</span>
+            <span class=" text-xl font-light text-zinc-500 dark:text-zinc-500">{{battleOptions.type}}</span>
 
-            <span class="font-light text-base sm:text-lg text-zinc-700 dark:text-zinc-300 mt-4">
+            <span class="font-light text-base sm:text-lg text-zinc-700 dark:text-zinc-400 mt-4">
                 <ul class="space-y-2">
                     <li>{{battleOptions.desc.one}}</li>
                     
@@ -18,7 +18,7 @@
                 </ul>
                   
             </span>
-            <span class=" items-end text-base md:text-lg text-zinc-700 dark:text-zinc-100 font-light mt-4">
+            <span class=" items-end text-base md:text-lg text-zinc-700 dark:text-zinc-300 font-light mt-4">
                 <span class="font-medium mr-2">Stack:</span> {{battleOptions.stack}}
             </span>
             <a [href]="battleOptions.link" target="_blank" alt="view battle options project" class="mt-8 text-lg font-medium text-zinc-700 dark:text-zinc-100 hover:text-zinc-500 w-36">
@@ -56,26 +56,26 @@
 
         <div class="flex space-x-6 mb-4">
             <h2 (click)="selectedTab = 'overview'" 
-                class="text-base sm:text-xl text-zinc-700 dark:text-zinc-100  font-bold cursor-pointer bg-blue-100 dark:bg-blue-400 p-3 px-4 rounded-xl" 
+                class="text-base sm:text-lg text-zinc-700 dark:text-zinc-100  font-bold cursor-pointer bg-blue-100 dark:bg-blue-400 p-3 px-4 rounded-xl" 
                 [ngClass]="{'text-blue-400 bg-blue-200 dark:bg-blue-500': selectedTab === 'overview'}">
                 {{overview.title}}
             </h2>
             <h2 (click)="selectedTab = 'lessons'" 
-                class="text-base sm:text-xl text-zinc-700 dark:text-zinc-100  font-bold cursor-pointer bg-blue-100 dark:bg-blue-400 p-3 px-4 rounded-xl" 
+                class="text-base sm:text-lg text-zinc-700 dark:text-zinc-100  font-bold cursor-pointer bg-blue-100 dark:bg-blue-400 p-3 px-4 rounded-xl" 
                 [ngClass]="{'text-blue-400 bg-blue-200 dark:bg-blue-500': selectedTab === 'lessons'}">
                 {{lesson.title}}
             </h2>
         </div>
 
         <div *ngIf="selectedTab === 'overview'" class=" grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <p *ngFor="let item of overviewItems" class="flex flex-col gap-2 font-light text-base text-zinc-700 dark:text-zinc-300 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 dark:border-zinc-700 dark:from-zinc-800 dark:to-zinc-900 rounded-2xl p-4">
+            <p *ngFor="let item of overviewItems" class="flex flex-col gap-2 font-light text-base text-zinc-700 dark:text-zinc-400 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 dark:border-zinc-800 dark:from-zinc-800 dark:to-zinc-900 rounded-2xl p-4">
               <span class="font-medium text-lg dark:text-zinc-100">{{item.title}}</span>
               {{item.content}}
             </p>
           </div>
           
           <div *ngIf="selectedTab === 'lessons'" class=" grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <p *ngFor="let item of lessonItems" class="flex flex-col gap-2 font-light text-base text-zinc-700 dark:text-zinc-300 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 dark:border-zinc-700 dark:from-zinc-800 dark:to-zinc-900 rounded-2xl p-4">
+            <p *ngFor="let item of lessonItems" class="flex flex-col gap-2 font-light text-base text-zinc-700 dark:text-zinc-400 bg-gradient-to-b from-zinc-50 to-zinc-100 border border-zinc-300 dark:border-zinc-800 dark:from-zinc-800 dark:to-zinc-900 rounded-2xl p-4">
               <span class="font-medium text-lg dark:text-zinc-100">{{item.title}}</span>
               {{item.content}}
             </p>
