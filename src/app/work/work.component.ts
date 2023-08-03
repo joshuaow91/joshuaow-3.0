@@ -34,9 +34,9 @@ export class WorkComponent implements OnInit, OnDestroy {
       this.themeSubscription.unsubscribe();
     }
 
-    toggleDarkMode() {
-      this.darkMode = !this.darkMode;
-    }
+    toggleDarkMode(event: any) {
+      this.darkMode = event.target.checked;
+    }    
 
     battleOptions = {
       title: 'BattleOptions',
