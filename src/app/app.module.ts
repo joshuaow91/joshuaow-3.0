@@ -10,6 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { ToggleComponent } from './themeToggle/themeToggle.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { FooterComponent } from './footer/footer.component';
     WorkComponent,
     AboutComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    ToggleComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +29,7 @@ import { FooterComponent } from './footer/footer.component';
     FontAwesomeModule,
     BrowserAnimationsModule,
     MatTooltipModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

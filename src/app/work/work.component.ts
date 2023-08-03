@@ -1,8 +1,8 @@
-import { Component } from "@angular/core";
+import { Component, OnDestroy, OnInit } from "@angular/core";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
 import { trigger, transition, style, animate } from '@angular/animations';
-import { audit } from "rxjs";
-
+import { ThemeService } from "../services/themeService";
+import { Subscription } from 'rxjs';
 @Component ({
     selector: 'app-work',
     templateUrl: './work.component.html',
@@ -16,10 +16,23 @@ import { audit } from "rxjs";
       ],
 })
 
-export class WorkComponent {
+export class WorkComponent implements OnInit, OnDestroy {
     arrowUp = faArrowUpRightFromSquare
     selectedTab: string = 'overview';
     darkMode = false;
+    themeSubscription: Subscription = new Subscription();
+
+    constructor(private themeService: ThemeService) {}
+  
+    ngOnInit() {
+      this.themeSubscription = this.themeService.getThemeUpdates().subscribe((theme) => {
+        this.darkMode = theme === 'dark';
+      });
+    }
+  
+    ngOnDestroy() {
+      this.themeSubscription.unsubscribe();
+    }
 
     toggleDarkMode() {
       this.darkMode = !this.darkMode;
