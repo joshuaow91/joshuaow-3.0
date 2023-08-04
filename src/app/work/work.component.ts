@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from "@angular/core";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
 import { trigger, transition, style, animate } from '@angular/animations';
-import { ThemeService } from "../services/themeService";
+import { ThemeService } from "../services/theme.service";
 import { Subscription } from 'rxjs';
 @Component ({
     selector: 'app-work',
