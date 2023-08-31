@@ -12,6 +12,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { ToggleComponent } from './themeToggle/themeToggle.component';
 import { FormsModule } from '@angular/forms';
+import { WorkTfoComponent } from './work-tfo/work-tfo.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     ContactComponent,
     FooterComponent,
     ToggleComponent,
+    WorkTfoComponent
   ],
   imports: [
     BrowserModule,

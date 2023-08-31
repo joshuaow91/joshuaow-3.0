@@ -40,7 +40,7 @@ export class WorkComponent implements OnInit, OnDestroy {
 
     battleOptions = {
       title: 'BattleOptions',
-      type: 'Full Stack Development',
+      type: 'Full-Stack Development',
       desc: {
         one: 'This real-time platform offers users a modern approach to financial market data. By providing a dedicated search tool for selecting and tracking options contracts, the platform encourages engagement through a trading contest and an interactive leaderboard for peer performance comparison.',
         two: 'Designed to synergize with the company\'s premium Discord channel, the platform both extends the existing educational services and acts as a lead magnet. It effectively leverages the trading competition and a snapshot of educational resources to drive traffic and increase community engagement.',
