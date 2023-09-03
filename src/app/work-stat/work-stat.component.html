@@ -1,4 +1,5 @@
-<div @fadeIn class="flex flex-col  items-center max-w-screen-xl  mx-auto my-14 pt-12 sm:pt-20 mb-10 md:mb-20 px-4 gap-16  xl:px-0 "
+<div @fadeIn
+    class="flex flex-col  items-center max-w-screen-xl  mx-auto my-14 pt-12 sm:pt-20 mb-10 md:mb-20 px-4 gap-16  xl:px-0 "
     id="work">
 
     <div class="flex flex-col-reverse lg:flex-row w-full  gap-10 justify-center">
@@ -18,11 +19,9 @@
             <span class=" text-xl font-light text-zinc-500 dark:text-zinc-300">{{stat.type}}</span>
 
             <span class="font-light text-base sm:text-lg text-zinc-700 dark:text-zinc-400 mt-4">
-                <ul class="space-y-2">
-                    <li>{{stat.desc.one}}</li>
-                </ul>
-
+                {{stat.desc.one}}
             </span>
+            
             <span class=" items-end text-base md:text-lg text-zinc-700 dark:text-zinc-300 font-light mt-4">
                 <span class="font-medium mr-2">Stack:</span> {{stat.stack}}
             </span>

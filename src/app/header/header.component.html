@@ -1,6 +1,6 @@
 <header class="
     flex flex-col
-    bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white via-zinc-200 to-zinc-50 dark:from-zinc-800 dark:via-zinc-900 dark:to-zinc-800
+    bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-white via-zinc-200 to-zinc-50 dark:from-zinc-800 dark:via-zinc-900 dark:to-zinc-800
     " 
     id="home"
     >
@@ -18,7 +18,7 @@
                     </button>
                 </div>
         
-                <ul *ngIf="isMenuOpen || screenSize === 'large'" class="flex lg:flex-row flex-col gap-4 lg:gap-6 font-medium tracking-wide text-zinc-700  dark:text-zinc-100 text-base w-full mt-6 lg:mt-0 lg:w-auto lg:items-center">
+                <ul *ngIf="isMenuOpen || screenSize === 'large'" class="flex lg:flex-row flex-col gap-4 lg:gap-12 font-medium tracking-wide text-zinc-700  dark:text-zinc-100 text-base w-full mt-6 lg:mt-0 lg:w-auto lg:items-center">
                     <li *ngFor="let item of menuItems">
                         <a [routerLink]="[item.routerLink]" alt="item.alt" [fragment]="item.fragment" class="hover:text-zinc-500 dark:hover:text-zinc-300" (click)="toggleMenu()">{{item.name}}</a>
                     </li>
