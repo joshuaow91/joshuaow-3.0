@@ -1,20 +1,16 @@
 <div @fadeIn class="flex flex-col  items-center max-w-screen-xl  mx-auto my-14 mb-10 md:mb-20 px-4 gap-16  xl:px-0 " id="work">
 
-    <div class="flex flex-col lg:flex-row w-full  gap-10 justify-center">
+    <div class="flex flex-col lg:flex-row w-full gap-10 sm:gap-20 justify-center">
 
-        <div class="flex flex-col gap-1 sm:gap-3  lg:w-1/2">
+        <div class="flex flex-col justify-center gap-1 sm:gap-3  lg:w-1/2">
             <h2 class="text-3xl sm:text-5xl text-zinc-700 dark:text-zinc-100 font-bold">
                 {{battleOptions.title}}
             </h2>
             <span class=" text-xl font-light text-zinc-500 dark:text-zinc-300">{{battleOptions.type}}</span>
 
-                <ul class="space-y-2 font-light  text-base sm:text-lg text-zinc-700 dark:text-zinc-400 mt-4">
-                    <li>{{battleOptions.desc.one}}</li>
-                    
-                    <li>{{battleOptions.desc.two}}</li>
-                
-                    <li>{{battleOptions.desc.three}}</li>
-                </ul>
+                <span class="space-y-2 font-light  text-base sm:text-lg text-zinc-700 dark:text-zinc-400 mt-4">
+                    {{battleOptions.desc}}
+                </span>
                   
             <span class=" items-end text-base md:text-lg text-zinc-700 dark:text-zinc-300 font-light mt-4">
                 <span class="font-medium mr-2">Stack:</span> {{battleOptions.stack}}
@@ -25,9 +21,9 @@
             </a>
         </div>
         
-        <div class="lg:w-1/2 justify-center lg:justify-end p-6 md:p-8 rounded-2xl bg-gradient-to-br from-blue-400 to-emerald-400 flex flex-col gap-4">
-            <img [src]="darkMode ? '../../assets/darknobg.png' : '../../assets/lightnobg.png'" alt="project image preview" 
-                class="rounded-xl drop-shadow-xl hover:-translate-y-2 transition-all ease-linear duration-300" 
+        <div class="lg:w-3/4 justify-center lg:justify-end p-6 md:p-8 rounded-2xl bg-gradient-to-br from-blue-400 to-emerald-400 flex flex-col gap-4 overflow-clip">
+            <img [src]="darkMode ? '../../assets/darkcon.gif' : '../../assets/lightcon.gif'" alt="project image preview" 
+                class="rounded-xl drop-shadow-xl hover:scale-110 transition-all ease-linear duration-300 " 
             />
             <div class="flex justify-center gap-5 items-center bg-white dark:bg-black dark:bg-opacity-40 bg-opacity-40 py-2 w-full md:w-1/2 rounded-xl mx-auto">
                 <span class="text-zinc-700 dark:text-zinc-100 font-semibold">Light</span>

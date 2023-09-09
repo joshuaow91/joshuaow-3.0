@@ -41,11 +41,7 @@ export class WorkComponent implements OnInit, OnDestroy {
     battleOptions = {
       title: 'BattleOptions',
       type: 'Full-Stack Development',
-      desc: {
-        one: 'This real-time platform offers users a modern approach to financial market data. By providing a dedicated search tool for selecting and tracking options contracts, the platform encourages engagement through a trading contest and an interactive leaderboard for peer performance comparison.',
-        two: 'Designed to synergize with the company\'s premium Discord channel, the platform both extends the existing educational services and acts as a lead magnet. It effectively leverages the trading competition and a snapshot of educational resources to drive traffic and increase community engagement.',
-        three: 'In summary, this project integrates data-driven insights, user-friendly design, real-time updates, and a preview of comprehensive trader education, to provide a holistic view of options trading and to drive growth for the company.'
-      },
+      desc: 'This project aimed to revamp an outdated, spreadsheet-based contest by introducing an automated, user-friendly platform. This new system streamlined data access for faster, more informed decision-making and added a live leaderboard to inject a competitive edge. The result was a surge in user engagement and the generation of new business leads. In short, the project turned a tedious manual process into a dynamic, real-time experience, enhancing operational efficiency and creating new opportunities for business growth.',
       stack: 'React | Node | Express | MongoDB | Tailwind',
       link: 'https://contest.stratalerts.com/'
     }
