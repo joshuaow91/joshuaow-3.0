@@ -27,7 +27,7 @@ export class WorkStatComponent {
         one: 'Redesigned the main website to spotlight services, products, and educators more effectively. The revamped user experience offers an intuitive layout for easier navigation, fostering greater engagement and setting the foundation for business growth.',
       },
       stack: 'React | TypeScript | Tailwind',
-      link: 'https://stattrading.netlify.app/'
+      link: 'https://stratalerts.com/'
     }
 
 
