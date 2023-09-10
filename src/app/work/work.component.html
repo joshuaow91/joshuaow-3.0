@@ -28,9 +28,9 @@
             <img [src]="darkMode ? '../../assets/darkcon.gif' : '../../assets/lightcon.gif'" alt="project image preview"
                 class="rounded-xl drop-shadow-xl hover:scale-110 transition-all ease-linear duration-300 " />
             <div
-                class="flex flex-col sm:flex-row justify-between items-center w-full mx-auto">
+                class="flex flex-col sm:flex-row justify-between gap-4 items-center w-full mx-auto">
                 <button (click)="showContent = !showContent"
-                class=" text-base  text-center font-medium text-zinc-700 dark:text-zinc-100 hover:bg-white/50  bg-white/40 dark:bg-black/40 py-2 px-4 rounded-full">
+                class=" text-base  text-center font-medium text-zinc-700 dark:text-zinc-100 hover:bg-white/50 dark:hover:bg-black/50 bg-white/40 dark:bg-black/40 py-2 px-4 rounded-full">
                 View Case Study
                 <fa-icon [icon]="chevron" class="text-blue-400 ml-2" />
             </button>
