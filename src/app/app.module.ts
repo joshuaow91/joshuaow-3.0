@@ -14,6 +14,7 @@ import { ToggleComponent } from './themeToggle/themeToggle.component';
 import { FormsModule } from '@angular/forms';
 import { WorkTfoComponent } from './work-tfo/work-tfo.component';
 import { WorkStatComponent } from './work-stat/work-stat.component';
+import { DocComponent } from './docwork/doc.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { WorkStatComponent } from './work-stat/work-stat.component';
     ToggleComponent,
     WorkTfoComponent,
     WorkStatComponent,
+    DocComponent,
   ],
   imports: [
     BrowserModule,
