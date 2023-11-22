@@ -43,8 +43,8 @@ export class WorkComponent implements OnInit, OnDestroy {
     battleOptions = {
       title: 'BattleOptions',
       type: 'Full-Stack Development',
-      desc: 'Transformed a traditional spreadsheet-based contest system to an automated platform using Node/Express/MongoDB, increasing user engagement and business lead generation. It featured JWT and OAuth2 for secure access, a tool for real-time market data analysis, and cron tasks for live leaderboard updates. The subsequent shift to a Spring Boot/Java/PostgreSQL backend improved data processing speed and system reliability, thereby boosting operational efficiency and supporting business expansion.',
-      stack: 'React | Spring Boot | Java | Postgres | Tailwind',
+      desc: 'This project aimed to revamp an outdated, spreadsheet-based contest by introducing an automated, user-friendly platform. This new system streamlined data access for faster, more informed decision-making and added a live leaderboard to inject a competitive edge. The result was a surge in user engagement and the generation of new business leads. In short, the project turned a tedious manual process into a dynamic, real-time experience, enhancing operational efficiency and creating new opportunities for business growth.',
+      stack: 'Spring Boot | Java | React | Postgres | Tailwind',
       link: 'https://contest.stratalerts.com/'
     }
 

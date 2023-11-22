@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { WorkTfoComponent } from './work-tfo/work-tfo.component';
 import { WorkStatComponent } from './work-stat/work-stat.component';
 import { DocComponent } from './docwork/doc.component';
+import { WorkSopfComponent } from './work-sopf/work.sopf.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { DocComponent } from './docwork/doc.component';
     WorkTfoComponent,
     WorkStatComponent,
     DocComponent,
+    WorkSopfComponent,
   ],
   imports: [
     BrowserModule,
