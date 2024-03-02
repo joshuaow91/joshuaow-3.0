@@ -1,0 +1,59 @@
+<div class="flex flex-col justify-center items-center max-w-screen-xl my-10 mb-10 mx-auto gap-10 " id="about">
+
+
+  <div class="relative flex h-32 w-full justify-center rounded-xl px-4 xl:px-0">
+    <span class="bg-gradient-to-br h-32 w-full flex flex-col gap-4 p-4 rounded-xl from-blue-400 to-emerald-400">
+    </span>
+    <div
+      class="absolute -bottom-14 right-10 md:left-14 flex h-32 w-32 items-center justify-center rounded-full border-4 border-zinc-50 dark:border-zinc-900 bg-blue-400">
+      <img class="h-full w-full rounded-full" src='../../assets/avatar.png' alt="avatar" />
+    </div>
+
+  </div>
+  <div class="flex flex-col md:items-center w-full gap-4 px-8 xl:px-0">
+    <h2 class="text-zinc-800 dark:text-zinc-100 font-bold text-3xl sm:text-5xl">About Me</h2>
+    <p class=" text-base sm:text-lg  text-zinc-800 dark:text-zinc-300 md:mt-0">
+      {{aboutMe.intro}}
+    </p>
+  </div>
+
+  <div class="grid sm:grid-cols-2 gap-4 md:gap-12 px-8 xl:px-0">
+    <ng-container *ngFor="let item of aboutItems">
+      <p
+        class="flex flex-col gap-3 text-zinc-700 dark:text-zinc-400  text-base leading-7 ring-1 ring-zinc-200 dark:ring-zinc-700 p-4 rounded-xl">
+        <span class="text-zinc-700 dark:text-zinc-100 font-medium text-lg flex items-center gap-4">
+          <svg class="w-8 h-8 text-blue-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            [attr.viewBox]="item.viewBox">
+            <path [attr.d]="item.svgPath" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2"></path>
+          </svg>
+          {{item.title}}
+        </span>
+        {{item.content}}
+      </p>
+    </ng-container>
+  </div>
+
+
+  <div class="flex flex-col justify-start items-center gap-6 w-full md:mt-6 px-4 xl:px-0">
+    <p class=" text-base sm:text-lg text-center  text-zinc-800 dark:text-zinc-300 mt-8 md:mt-0">
+      {{aboutMe.tools}}
+    </p>
+    <ul class="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-11 gap-16 gap-y-8 lg:gap-16 mt-2 md:mt-6">
+      <li><img src="../../assets/java.svg" alt="" class="w-12 h-12" matTooltip="Java"></li>
+      <li><img src="../../assets/spring-original.svg" alt="" class="w-12 h-12" matTooltip="Spring Boot"></li>
+      <li><img src="../../assets/react.svg" alt="" class="w-12 h-12" matTooltip="React"></li>
+      <li><img src="../../assets/angular.svg" alt="" class="w-12 h-12" matTooltip="Angular"></li>
+      <li><img src="../../assets/ts.svg" alt="" class="w-12 h-12" matTooltip="TypeScript"></li>
+      <li><img src="../../assets/js.svg" alt="" class="w-12 h-12" matTooltip="JavaScript"></li>
+      <li><img src="../../assets/node.svg" alt="" class="w-12 h-12" matTooltip="Node.js"></li>
+      <li><img src="../../assets/postgres.svg" alt="" class="w-12 h-12" matTooltip="PostgreSQL"></li>
+      <li><img src="../../assets/mongo.svg" alt="" class="w-12 h-12" matTooltip="MongoDB"></li>
+      <li><img src="../../assets/tailwind.svg" alt="" class="w-12 h-12" matTooltip="Tailwind CSS"></li>
+      <li><img src="../../assets/git.svg" alt="" class="w-12 h-12" matTooltip="Git"></li>
+    </ul>
+  </div>
+
+
+
+</div>
