@@ -24,9 +24,9 @@ export class WorkSopfComponent {
       title: 'Save On Prop Firms',
       type: 'Full-Stack Development',
       desc: {
-        one: 'This project involves the development of an affiliate coupon website. Key features include a coupon code management system, a user-friendly custom filtering tool for firm selection all with admin capabilities to enable easy coupon and content management. Automation through Cron jobs ensures the website maintains up-to-date promotions by clearing expired coupon codes. These solutions enhance user experience and facilitate effective affiliate marketing partnerships.',
+        one: 'This project is an affiliate coupon website designed to enhance the management of promotions and affiliate marketing partnerships. It features a coupon management system, enabling the ability to update coupon codes. The website benefits from optimized search engine visibility and performance, thanks to the use of Next.js. The platform also supports admin & user reviews, enabling users & admins to post detailed insights. Additionally, the site hosts a dynamic blog, providing a medium for publishing relevant articles, updates, and news, which also boosts SEO efforts and user engagement.',
       },
-      stack: 'Spring Boot | Java | React | Postgres | Tailwind',
+      stack: 'Next.js | Node.js | Contentful CMS | Tailwind',
       link: 'https://www.saveonpropfirms.com/'
     }
 
