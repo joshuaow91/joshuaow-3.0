@@ -1,30 +1,91 @@
-<div class="w-full py-10 sm:py-14 px-4 xl:px-0 ">
-
-    <div class="bg-gradient-to-br from-blue-400 to-emerald-400 max-w-screen-xl mx-auto p-6 md:p-8 rounded-2xl">
-    <div class="w-full max-w-screen-xl mx-auto bg-white/50 dark:bg-black dark:bg-opacity-40 drop-shadow-lg dark:drop-shadow-none p-8 rounded-xl" id="contact">
-
-        <div class="flex flex-col md:flex-row justify-between gap-10">
-
-            <div class="flex flex-col gap-4">
-                <h1 class="text-zinc-700 dark:text-zinc-100 text-3xl sm:text-5xl font-bold">Get in touch</h1>
-                <span class=" text-base max-w-xs  text-zinc-600 dark:text-zinc-300">Feel free to connect with me on <br/> social media or by email.</span>
-            </div>
-
-            <div class="gap-8 flex flex-col">
-                <a [href]="links.email" target="_blank" alt="contact, send an email" class=" flex gap-2 items-center justify-center text-zinc-100 bg-blue-400 rounded-lg py-2.5 hover:-translate-y-1 transition-all ease-linear duration-300 px-4 font-semibold">
-                    <svg
-                        class="w-6 h-6 text-zinc-100  " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 2-8.4 7.05a1 1 0 0 1-1.2 0L1 2m18 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1m18 0v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2"/>
-                  </svg> Contact me</a>
-
-                <ul class=" leading-7 space-y-3 text-sm font-medium text-zinc-700 dark:text-zinc-100 ">
-                    <li><a [href]="links.linkedin" target="_blank" alt="linkedin" class=" hover:underline"><fa-icon [icon]="linkedin" class="text-2xl text-white mr-3  dark:text-zinc-300 dark:hover:text-zinc-100 "/>linkedin.com/in/JoshuaOwDev</a></li>
-                    <li><a [href]="links.twitter" target="_blank" alt="twitter" class=" hover:underline flex"><img src="../../assets/xwhite.png" class="h-5 w-5 mr-3"/>twitter.com/JoshuaOwDev</a></li>
-                    <li><a [href]="links.github" target="_blank" alt="github" class=" hover:underline flex"><fa-icon [icon]="github" class="text-2xl text-white mr-3  dark:text-zinc-300 dark:hover:text-zinc-100 "/>github.com/JoshuaOw91</a></li>
-                </ul>
-            </div>
+<div class="w-full py-10 sm:py-14 px-4 xl:px-0">
+  <div
+    class="bg-gradient-to-br from-blue-400 to-emerald-400 max-w-screen-xl mx-auto p-6 md:p-8 rounded-2xl"
+  >
+    <div
+      class="w-full max-w-screen-xl mx-auto bg-white/50 dark:bg-black dark:bg-opacity-40 drop-shadow-lg dark:drop-shadow-none p-8 rounded-xl"
+      id="contact"
+    >
+      <div class="flex flex-col md:flex-row justify-between gap-10">
+        <div class="flex flex-col gap-4">
+          <h1
+            class="text-zinc-700 dark:text-zinc-100 text-3xl sm:text-5xl font-bold"
+          >
+            Get in touch
+          </h1>
+          <span class="text-base max-w-xs text-zinc-600 dark:text-zinc-300"
+            >Feel free to connect with me on <br />
+            social media or by email.</span
+          >
         </div>
 
+        <div class="gap-8 flex flex-col">
+          <a
+            [href]="links.email"
+            target="_blank"
+            alt="contact, send an email"
+            class="flex gap-2 items-center justify-center text-zinc-100 bg-blue-400 rounded-lg py-2.5 hover:-translate-y-1 transition-all ease-linear duration-300 px-4 font-semibold"
+          >
+            <svg
+              class="w-6 h-6 text-zinc-100"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 16"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 2-8.4 7.05a1 1 0 0 1-1.2 0L1 2m18 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1m18 0v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2"
+              />
+            </svg>
+            Contact me</a
+          >
+
+          <ul
+            class="leading-7 space-y-3 text-sm font-medium text-zinc-700 dark:text-zinc-100"
+          >
+            <li>
+              <a
+                [href]="links.linkedin"
+                target="_blank"
+                alt="linkedin"
+                class="hover:underline"
+                ><fa-icon
+                  [icon]="linkedin"
+                  class="text-2xl text-white mr-3 dark:text-zinc-300 dark:hover:text-zinc-100"
+                />linkedin.com/in/JoshuaOwDev</a
+              >
+            </li>
+            <li>
+              <a
+                [href]="links.twitter"
+                target="_blank"
+                alt="twitter"
+                class="hover:underline flex"
+                ><img
+                  src="../../assets/xwhite.png"
+                  class="h-5 w-5 mr-3"
+                />twitter.com/JoshuaOwDev</a
+              >
+            </li>
+            <li>
+              <a
+                [href]="links.github"
+                target="_blank"
+                alt="github"
+                class="hover:underline flex"
+                ><fa-icon
+                  [icon]="github"
+                  class="text-2xl text-white mr-3 dark:text-zinc-300 dark:hover:text-zinc-100"
+                />github.com/JoshuaOw91</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    </div>
+  </div>
 </div>

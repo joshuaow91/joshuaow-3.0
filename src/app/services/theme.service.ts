@@ -3,16 +3,20 @@ import { DOCUMENT } from '@angular/common';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ThemeService {
   private renderer: Renderer2;
   private colorTheme: BehaviorSubject<'light' | 'dark'>;
 
-  constructor(rendererFactory: RendererFactory2, @Inject(DOCUMENT) private document: Document) {
+  constructor(
+    rendererFactory: RendererFactory2,
+    @Inject(DOCUMENT) private document: Document,
+  ) {
     this.renderer = rendererFactory.createRenderer(null, null);
 
-    const storedTheme = localStorage.getItem('theme') as 'light' | 'dark' || 'light';
+    const storedTheme =
+      (localStorage.getItem('theme') as 'light' | 'dark') || 'light';
     this.colorTheme = new BehaviorSubject<'light' | 'dark'>(storedTheme);
     this.update(storedTheme);
   }

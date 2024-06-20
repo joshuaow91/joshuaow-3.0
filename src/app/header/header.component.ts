@@ -69,9 +69,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.router.events
-      .pipe(
-        filter((e) => e instanceof Scroll),
-      )
+      .pipe(filter((e) => e instanceof Scroll))
       .subscribe((e: any) => {
         if (e.anchor) {
           setTimeout(() => {

@@ -1,81 +1,141 @@
-<header class="
-    flex flex-col sm:pt-16 sm:pb-12
-    bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] sm:bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-white via-zinc-200 to-zinc-200 dark:from-zinc-800 dark:via-zinc-900 dark:to-zinc-900
-    "
-    id="home"
+<header
+  class="flex flex-col sm:pt-16 sm:pb-12 bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] sm:bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-white via-zinc-200 to-zinc-200 dark:from-zinc-800 dark:via-zinc-900 dark:to-zinc-900"
+  id="home"
+>
+  <div class="flex justify-center">
+    <nav
+      [@slideInOut]="isHidden ? 'out' : 'in'"
+      class="fixed top-0 w-full bg-zinc-100 dark:bg-zinc-900 dark:bg-opacity-5 bg-opacity-5 backdrop-blur-md z-50 px-4 xl:px-0 transition-transform duration-500 ease-in-out flex items-center justify-between py-4"
     >
+      <div
+        class="max-w-screen-xl flex flex-col lg:flex-row justify-between w-full mx-auto"
+      >
+        <div class="flex justify-between items-center">
+          <a
+            [routerLink]="['/']"
+            fragment="home"
+            alt="home"
+            class="text-zinc-700 dark:text-zinc-100 font-medium text-xl hover:scale-110 transition-all ease-linear duration-300 flex gap-2 items-center"
+          >
+            <span
+              class="bg-gradient-to-br from-blue-400 to-emerald-400 tracking-tighter h-5 w-5 rounded-full"
+            ></span>
+            Joshua Ow
+          </a>
 
-    <div class="flex justify-center">
-        <nav [@slideInOut]="isHidden ? 'out' : 'in'" class="fixed top-0 w-full bg-zinc-100 dark:bg-zinc-900 dark:bg-opacity-5 bg-opacity-5 backdrop-blur-md z-50 px-4 xl:px-0 transition-transform duration-500 ease-in-out flex items-center justify-between py-4">
-            <div class="max-w-screen-xl flex flex-col lg:flex-row justify-between w-full mx-auto">
-                <div class="flex justify-between items-center">
-                    <a [routerLink]="['/']" fragment="home" alt="home" class="text-zinc-700  dark:text-zinc-100 font-medium text-xl hover:scale-110 transition-all ease-linear duration-300 flex gap-2 items-center">
-                        <span class="bg-gradient-to-br from-blue-400 to-emerald-400 tracking-tighter h-5 w-5 rounded-full"></span> Joshua Ow
-                    </a>
-
-                    <button (click)="toggleMenu()" class="lg:hidden " aria-label="menu toggle open and close">
-                        <fa-icon [icon]="menuIcon" class="text-xl text-zinc-700  dark:text-zinc-100"></fa-icon>
-                    </button>
-                </div>
-
-                <ul *ngIf="isMenuOpen || screenSize === 'large'" class="flex lg:flex-row flex-col gap-4 lg:gap-12 font-semibold text-zinc-700  dark:text-zinc-100 text-base w-full mt-6 lg:mt-0 lg:w-auto lg:items-center">
-                    <li *ngFor="let item of menuItems">
-                        <a [routerLink]="[item.routerLink]" alt="item.alt" [fragment]="item.fragment" class="hover:text-zinc-500 dark:hover:text-zinc-300" (click)="toggleMenu()">{{item.name}}</a>
-                    </li>
-                    <app-toggle/>
-                </ul>
-            </div>
-        </nav>
-    </div>
-
-
-
-
-    <div @fadeIn class="flex items-center mt-36 sm:mt-20 mb-20 sm:mb-20 justify-center lg:justify-between max-w-screen-xl mx-auto w-full px-4 xl:px-0">
-        <div class="flex flex-col font-semibold items-center md:items-start text-5xl md:text-7xl lg:text-7xl gap-2 text-zinc-700 dark:text-zinc-100">
-
-            <div class="flex flex-col items-center z-10">
-                <span class="hidden sm:block tracking-tighter">
-                    Hello! I'm <span class="">Josh</span>, a<br/> <span class="bg-gradient-to-br from-blue-400 to-emerald-400 text-transparent bg-clip-text">Full Stack Developer</span><br/> based in Texas.
-                </span>
-
-                <!-- mobile -->
-                <span class="flex flex-col font-semibold tracking-tighter text-5xl sm:hidden px-4">
-                    <span class="">Hello! I'm Josh, a</span>
-                    <span class=" bg-gradient-to-r from-blue-400 to-emerald-400 text-transparent bg-clip-text">Full Stack Developer</span>
-                    <span class="">based in Texas.</span>
-                </span>
-                <!-- end mobile -->
-
-                <p class="tracking-tighter w-full pl-4 mx-auto sm:px-0 text-xl md:text-3xl text-zinc-600 dark:text-zinc-300 lg:text-3xl font-normal mt-3 sm:mt-6 self-center md:self-start ">I turn ideas into cutting-edge software. </p>
-            </div>
-
-            <ul class="flex gap-6 text-sm  font-medium mt-4 sm:mt-12 self-start p-4  sm:p-0">
-                <li class="hover:-translate-y-1 transition-all ease-linear duration-300 ">
-                    <a [routerLink]="['/']" fragment="work" alt="work"
-                        class=" rounded-full bg-blue-400 text-zinc-50  transition-all ease-linear duration-300 p-2.5 px-4  sm:px-6">View my projects &rarr;</a>
-                </li>
-                <li class="hover:-translate-y-1 transition-all ease-linear duration-300">
-                    <a [routerLink]="['/']" fragment="contact" alt="contact"
-                    class=" rounded-full bg-slate-100 border border-zinc-300 text-blue-500  transition-all ease-linear duration-300 p-2.5 px-4  sm:px-6 ">Work with me &rarr;</a>
-                </li>
-            </ul>
-
+          <button
+            (click)="toggleMenu()"
+            class="lg:hidden"
+            aria-label="menu toggle open and close"
+          >
+            <fa-icon
+              [icon]="menuIcon"
+              class="text-xl text-zinc-700 dark:text-zinc-100"
+            ></fa-icon>
+          </button>
         </div>
 
-        <div @fadeIn  class="hidden lg:flex flex-col items-center rounded-full w-96 h-96 p-4 bg-white dark:bg-zinc-800 drop-shadow-3xl dark:drop-shadow-none">
-            <div class="flex h-full w-full justify-center rounded-xl" >
-                <span class="bg-gradient-to-br h-full w-full rounded-full from-blue-400 to-emerald-400 flex justify-center items-center group">
-                    <fa-icon [icon]="faLayer" class="text-zinc-100 text-9xl group-hover:-translate-y-3 transition-all ease-linear duration-300" />
-                </span>
-            </div>
-        </div>
+        <ul
+          *ngIf="isMenuOpen || screenSize === 'large'"
+          class="flex lg:flex-row flex-col gap-4 lg:gap-12 font-semibold text-zinc-700 dark:text-zinc-100 text-base w-full mt-6 lg:mt-0 lg:w-auto lg:items-center"
+        >
+          <li *ngFor="let item of menuItems">
+            <a
+              [routerLink]="[item.routerLink]"
+              alt="item.alt"
+              [fragment]="item.fragment"
+              class="hover:text-zinc-500 dark:hover:text-zinc-300"
+              (click)="toggleMenu()"
+              >{{ item.name }}</a
+            >
+          </li>
+          <app-toggle />
+        </ul>
+      </div>
+    </nav>
+  </div>
 
+  <div
+    @fadeIn
+    class="flex items-center mt-36 sm:mt-20 mb-20 sm:mb-20 justify-center lg:justify-between max-w-screen-xl mx-auto w-full px-4 xl:px-0"
+  >
+    <div
+      class="flex flex-col font-semibold items-center md:items-start text-5xl md:text-7xl lg:text-7xl gap-2 text-zinc-700 dark:text-zinc-100"
+    >
+      <div class="flex flex-col items-center z-10">
+        <span class="hidden sm:block tracking-tighter">
+          Hello! I'm <span class="">Josh</span>, a<br />
+          <span
+            class="bg-gradient-to-br from-blue-400 to-emerald-400 text-transparent bg-clip-text"
+            >Full Stack Developer</span
+          ><br />
+          based in Texas.
+        </span>
+
+        <!-- mobile -->
+        <span
+          class="flex flex-col font-semibold tracking-tighter text-5xl sm:hidden px-4"
+        >
+          <span class="">Hello! I'm Josh, a</span>
+          <span
+            class="bg-gradient-to-r from-blue-400 to-emerald-400 text-transparent bg-clip-text"
+            >Full Stack Developer</span
+          >
+          <span class="">based in Texas.</span>
+        </span>
+        <!-- end mobile -->
+
+        <p
+          class="tracking-tighter w-full pl-4 mx-auto sm:px-0 text-xl md:text-3xl text-zinc-600 dark:text-zinc-300 lg:text-3xl font-normal mt-3 sm:mt-6 self-center md:self-start"
+        >
+          I turn ideas into cutting-edge software.
+        </p>
+      </div>
+
+      <ul
+        class="flex gap-6 text-sm font-medium mt-4 sm:mt-12 self-start p-4 sm:p-0"
+      >
+        <li
+          class="hover:-translate-y-1 transition-all ease-linear duration-300"
+        >
+          <a
+            [routerLink]="['/']"
+            fragment="work"
+            alt="work"
+            class="rounded-full bg-blue-400 text-zinc-50 transition-all ease-linear duration-300 p-2.5 px-4 sm:px-6"
+            >View my projects &rarr;</a
+          >
+        </li>
+        <li
+          class="hover:-translate-y-1 transition-all ease-linear duration-300"
+        >
+          <a
+            [routerLink]="['/']"
+            fragment="contact"
+            alt="contact"
+            class="rounded-full bg-slate-100 border border-zinc-300 text-blue-500 transition-all ease-linear duration-300 p-2.5 px-4 sm:px-6"
+            >Work with me &rarr;</a
+          >
+        </li>
+      </ul>
     </div>
 
-
+    <div
+      @fadeIn
+      class="hidden lg:flex flex-col items-center rounded-full w-96 h-96 p-4 bg-white dark:bg-zinc-800 drop-shadow-3xl dark:drop-shadow-none"
+    >
+      <div class="flex h-full w-full justify-center rounded-xl">
+        <span
+          class="bg-gradient-to-br h-full w-full rounded-full from-blue-400 to-emerald-400 flex justify-center items-center group"
+        >
+          <fa-icon
+            [icon]="faLayer"
+            class="text-zinc-100 text-9xl group-hover:-translate-y-3 transition-all ease-linear duration-300"
+          />
+        </span>
+      </div>
+    </div>
+  </div>
 </header>
 
-<hr class=" mb-8 sm:mb-16 dark:border-zinc-800">
-
-
+<hr class="mb-8 sm:mb-16 dark:border-zinc-800" />
