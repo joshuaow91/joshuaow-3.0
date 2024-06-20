@@ -23,7 +23,7 @@ export class WorkTfoComponent {
     desc: {
       one: "Built a robust and user-friendly website to address the client's need for a platform that not only showcases their specialized TradingView indicators but also facilitates a subscription-based revenue model. This solution effectively transforms the client's expertise into a marketable, subscription-based product, optimizing both user engagement and revenue generation.",
     },
-    stack: 'React | TypeScript | Tailwind',
+    stack: 'React | TypeScript | Tailwind CSS',
     link: 'https://stratalerts.com/tfo',
   };
 }

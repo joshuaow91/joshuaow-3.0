@@ -23,7 +23,7 @@ export class WorkStatComponent {
     desc: {
       one: 'Redesigned the main website to spotlight services, products, and educators more effectively. The revamped user experience offers an intuitive layout for easier navigation, fostering greater engagement and setting the foundation for business growth.',
     },
-    stack: 'React | TypeScript | Tailwind',
+    stack: 'React | TypeScript | Tailwind CSS',
     link: 'https://stratalerts.com/',
   };
 }

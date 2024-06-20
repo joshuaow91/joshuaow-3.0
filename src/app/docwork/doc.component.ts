@@ -23,7 +23,7 @@ export class DocComponent {
     desc: {
       one: 'A prominent TradingView indicator provider faced consistent user inquiries. To address this, an intuitive guidance webpage was developed, offering detailed explanations and a custom search tool. This solution reduced repetitive questions and significantly improved the user experience while also providing more time for the owner to concentrate on enhancing existing products or creating new ones.',
     },
-    stack: 'React | TypeScript | Tailwind',
+    stack: 'React | TypeScript | Tailwind CSS',
     link: 'https://docs.tradeforopp.com/',
   };
 }
