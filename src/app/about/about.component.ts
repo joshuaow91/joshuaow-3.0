@@ -39,14 +39,14 @@ export class AboutComponent {
   aboutMe = {
     intro:
       "I'm a Software Engineer specializing in developing scalable, customer-centric solutions. My expertise lies in problem-solving, efficient communication, and quickly adapting to new technologies to meet client and business needs. In my role as a Software Engineer, I focus on the these key areas:",
-      problemSolving:
+    problemSolving:
       'I excel in analyzing complex problems and coming up with effective solutions, breaking down challenges into manageable parts',
-      concepts:
+    concepts:
       'My work is characterized by precision and accuracy, with credit to testing, peer reviews and refined iterations of my code to ensure its quality',
     adaptability:
       'I embrace change and eagerly acquire new skills, staying up-to-date with emerging technologies and methodologies in the dynamic field of software engineering.',
     communication:
-      "I thrive while working under a collaborative environment, sharing knowledge, and working cohesively with others towards a common goal, all while effectively communicating complex technical concepts to non-technical team members and clients alike.",
+      'I thrive while working under a collaborative environment, sharing knowledge, and working cohesively with others towards a common goal, all while effectively communicating complex technical concepts to non-technical team members and clients alike.',
     // teamwork:
     //   'My experience has taught me the value of effective teamwork in software development. I believe in fostering a collaborative environment, sharing knowledge, and working cohesively with others towards a common goal.',
     // customer:

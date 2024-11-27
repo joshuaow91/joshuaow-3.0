@@ -4,7 +4,7 @@ import {
   faChevronDown,
 } from '@fortawesome/free-solid-svg-icons';
 import { trigger, transition, style, animate } from '@angular/animations';
-import { ThemeService } from '../services/theme.service';
+import { ThemeService } from '../../services/theme.service';
 import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-work',
